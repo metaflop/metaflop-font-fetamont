@@ -1,0 +1,17 @@
+ffmchar("Lslash",13,ht#,0);
+x1=leftstemloc+noise;
+x2=leftstemloc+noise;
+w-x3=leftstemloc-ho+noise;
+lft x4=eps+noise;
+x5=.45w+noise;
+bot y1=noise; 
+bot y3=noise; 
+top y2=h+noise;
+y4=.4h+noise;
+z5=z4+whatever*dir(40);
+draw z3--z1--z2;
+draw z4--z5;
+charanchortops_[charcode]=(leftstemloc,h);
+charanchortoprights_[charcode]=(.5w,h);
+labels(1,2,3,4,5); 
+endchar;

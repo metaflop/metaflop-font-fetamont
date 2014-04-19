@@ -1,0 +1,12 @@
+ffmchar("dieresis",8,x_ht#+acc_ht#,0);
+x1=x2=.5w-max(1.8u,(1+dotincr)*.7px)+noise; 
+x3=x4=.5w+max(1.8u,(1+dotincr)*.7px)+noise; 
+bot y1=.3[x_ht,h]+noise;
+y2=y1+dotincr*py;
+bot y3=.3[x_ht,h]+noise;
+y4=y3+dotincr*py;
+draw dotcircle(z1,z2);
+draw dotcircle(z3,z4);
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3,4); 
+endchar;

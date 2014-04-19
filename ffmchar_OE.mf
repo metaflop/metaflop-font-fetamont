@@ -1,0 +1,27 @@
+ffmchar("OE",22,ht#,0);
+italcorr .9ht#*slant;
+x2=.5w+noise;
+x4=good.x(1.5u+s+noise);
+x6=.5w+noise;
+x7=w-leftstemloc+o+noise;
+x9=w-leftstemloc+o-xgap+noise;
+x1=w-leftstemloc+o+noise;
+x3=.382w+noise;
+x5=.382w+noise;
+y4=barheight+noise;
+y8=barheight+noise;
+top y7=h+noise;
+y9=barheight+noise;
+bot y1=noise;
+bot y3=noise;
+top y5=h+noise;
+z2=whatever[z1,z3];
+z6=whatever[z5,z7];
+z8=whatever[z2,z6];
+draw z1--z3
+ & half(z3,z3-z1,z4,randup,z5,z7-z5)
+ & z5--z7;
+draw z2--z6;
+draw z8--z9;
+labels(1,2,3,4,5,6,7,8,9); 
+endchar;

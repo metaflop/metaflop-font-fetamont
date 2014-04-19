@@ -1,0 +1,8 @@
+ffmchar("quotesinglbase",3,x_ht#,comma_depth#);
+x1=.4w+noise; 
+x2=.6w+noise;
+bot y1=noise-d-o; 
+y2=-d+ht-.5[barheight,x_ht]+noise;
+draw z1--z2;
+labels(1,2); 
+endchar;

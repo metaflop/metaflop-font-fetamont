@@ -1,0 +1,20 @@
+ffmchar("P",14,ht#,0);
+italcorr .8ht#*slant;
+x1=leftstemloc+noise;
+x3=leftstemloc+noise;
+x4=.618[x1,w-x1]+noise;
+x5=.618[x1,w-x1]+noise;
+x6=.5[w-x1,lft w]+noise; 
+y2=barheight+noise;
+y5=barheight+noise;
+bot y1=noise-o;
+top y3=h+noise; 
+top y4=h+noise; 
+y6=.5[y4,y5]+noise;
+z2=whatever[z1,z3];
+draw z1--z3--z4; 
+draw z2--z5;
+draw half(z4,z4-z3,z6,-randup,z5,z2-z5);
+labels(1,2,3,4,5,6); 
+endchar;
+

@@ -1,0 +1,9 @@
+ffmchar("slash",10,ht#,comma_depth#);
+italcorr ht#*slant;
+x1=good.x(2u+s+noise);
+x2=good.x(w-2u-s+noise);
+bot y1=noise-d-o; 
+top y2=h+o+noise;
+draw z1--z2;
+labels(1,2); 
+endchar;

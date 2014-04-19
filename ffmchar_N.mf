@@ -1,0 +1,17 @@
+ffmchar("N",15,ht#,0);
+italcorr .8ht#*slant;
+x1=leftstemloc+noise;
+x2=leftstemloc+noise;
+x4=w-leftstemloc+noise;
+x5=w-leftstemloc+noise;
+bot y1=noise-o;
+top y2=h+o+noise;
+y3=y4+ygap+noise;
+bot y4=noise-o;
+top y5=h+o+noise;
+z3=whatever[z4,z5];
+draw z1--z2--z3; 
+draw z4--z5; 
+charanchortops_[charcode]=(.5w,h);
+labels(1,2,3,4,5); 
+endchar;

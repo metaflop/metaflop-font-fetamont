@@ -1,0 +1,30 @@
+ffmchar("dollar",11,ht#,0);
+italcorr .7ht#*slant;
+x3=good.x(1.5u+s+noise);
+x8=good.x(1.5u+s+noise);
+w-x1=leftstemloc+noise;
+w-x6=good.x(1.5u+s+noise);
+x2=.382[x3,x6]+noise;
+x4=.382[x3,x6]+noise;
+x5=.618[x3,x6]+noise;
+x7=.618[x3,x6]+noise;
+x9=.5w+noise;
+x10=.5w+noise;
+top y1=h+noise; 
+top y2=h+noise; 
+y3=.6[y2,y4]+noise; 
+y4=barheight+noise; 
+y5=barheight+noise; 
+y6=.5[y5,y7]+noise; 
+bot y7=noise;
+bot y8=noise;
+top y9=noise;
+bot y10=h+noise;
+draw z1--z2 
+ & half(z2,z2-z1,z3,-randup,z4,z5-z4)
+ & z4--z5 
+ & half(z5,z5-z4,z6,-randup,z7,z8-z7) 
+ & z7--z8;
+draw z9--z10;
+labels(1,2,3,4,5,6,7,8,9,10); 
+endchar;

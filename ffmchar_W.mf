@@ -1,0 +1,16 @@
+ffmchar("W",20,ht#,0);
+italcorr ht#*slant;
+x1=good.x(1.5u+s+noise)-ho;
+w-x5=good.x(1.5u+s+noise)-ho;
+x3=.5[x1,x5]+noise;
+top y1=h+o+noise;
+bot y2=noise-o;
+y3=y1-ygap+noise;
+bot y4=noise-o;
+top y5=h+o+noise;
+z4=z5+whatever*(x5-x1,4*(y1-y2)-2ygap);
+z2=z1+whatever*(x1-x5,4*(y1-y2)-2ygap);
+draw z1--z2--z3;
+draw z3--z4--z5;
+labels(1,2,3,4,5); 
+endchar;

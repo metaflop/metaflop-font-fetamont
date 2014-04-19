@@ -1,0 +1,1 @@
+ffmcombinedchar("Adieresis","A","dieresis","top",ht#+acc_ht#,0);

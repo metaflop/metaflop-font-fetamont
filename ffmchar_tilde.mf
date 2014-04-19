@@ -1,0 +1,19 @@
+ffmchar("tilde",9,x_ht#+acc_ht#,0);
+lft x1=eps+noise; 
+x2=.3w+noise;
+x4=.7w+noise;
+x3=.5w+noise;
+rt x5=w-eps+noise; 
+bot y1=.2[x_ht,h]+noise;
+bot y4=.2[x_ht,h]+noise;
+top y2=h+noise;
+top y5=h+noise;
+y3=.6[x_ht,h]+noise;
+if angle direction 1 of (z2{right}...z3...z4{right}) < -90:
+ draw z1{randup}...z2{randrt}...z3{-randup}...z4{randrt}...z5{randup};
+else:
+ draw z1{randup}...z2{randrt}...z3...z4{randrt}...z5{randup};
+fi
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3,4,5); 
+endchar;

@@ -1,0 +1,12 @@
+ffmchar("perthousandzero",8,ht#,0);
+x3=good.x(1.5u+s+noise);
+w-x1=good.x(1.5u+s+noise); 
+x2=.5w+noise;
+x4=.5w+noise;
+y1=.2h+noise;
+top y2=.4h+o+noise;
+y3=.2h+noise;
+bot y4=noise-o;
+draw full(z1,randup,z2,-randrt,z3,-randup,z4,randrt);
+labels(1,2,3,4); 
+endchar;

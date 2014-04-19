@@ -1,0 +1,18 @@
+ffmchar("Oslash",15,ht#,0);
+italcorr ht#*slant;
+x1=.5w+noise;
+x2=good.x(1.5u+s+noise);
+x3=.5w+noise; 
+w-x4=good.x(1.5u+s+noise);  
+x5=good.x(1.5u+s+noise);
+w-x6=good.x(1.5u+s+noise);  
+top y1=h+o+noise; 
+y2=barheight+noise;
+bot y3=noise-o;
+y4=barheight+noise;
+bot y5=noise-o;
+top y6=h+o+noise;
+draw full(z1,-randrt,z2,-randup,z3,randrt,z4,randup);
+draw z5--z6;
+labels(1,2,3,4,5,6); 
+endchar;

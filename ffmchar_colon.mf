@@ -1,0 +1,11 @@
+ffmchar("colon",5,x_ht#,0);
+italcorr .8barheight#*slant;
+x1=x2=.5w+noise;
+x3=x4=.5w+noise;
+bot y1=noise-o;
+y2=y1+dotincr*py;
+y3=y4-dotincr*py=barheight+noise;
+draw dotcircle(z1,z2);
+draw dotcircle(z3,z4);
+labels(1,2,3,4); 
+endchar;

@@ -1,0 +1,14 @@
+ffmchar("plus",15,x_ht#,0);
+italcorr .5x_ht#*slant;
+x1=good.x(2u+s+noise);
+x2=good.x(w-2u-s+noise);
+x3=.5w+noise;
+x4=.5w+noise;
+y1=.5h+noise; 
+y2=.5h+noise; 
+y3=noise-o; 
+y4=h+o+noise; 
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4); 
+endchar;

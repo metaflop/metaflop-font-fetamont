@@ -1,0 +1,10 @@
+ffmchar("asciicircum",8,ht#,0);
+lft x1=eps+noise; 
+x2=.5w+noise;
+rt x3=w-eps+noise; 
+bot y1=x_ht+noise;
+bot y3=x_ht+noise;
+top y2=h+o+noise;
+draw z1--z2--z3;
+labels(1,2,3); 
+endchar;

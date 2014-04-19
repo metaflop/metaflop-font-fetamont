@@ -1,0 +1,1 @@
+ffmcombinedchar("Aogonek","A","ogonek","bot",ht#,comma_depth#);

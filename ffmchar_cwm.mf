@@ -1,0 +1,5 @@
+ffmchar("cwm",0,ht#,0);
+z1=(0,0); 
+undraw z1; %just for fontforge
+labels(1); 
+endchar;

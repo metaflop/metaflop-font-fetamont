@@ -1,0 +1,11 @@
+ffmchar("V",13,ht#,0);
+italcorr ht#*slant;
+x1=good.x(1.5u+s+noise)-ho;
+w-x3=good.x(1.5u+s+noise)-ho;
+x2=.5[x1,x3]+noise;
+top y1=h+o+noise;
+bot y2=noise-o;
+top y3=h+o+noise;
+draw z1--z2--z3;
+labels(1,2,3); 
+endchar;

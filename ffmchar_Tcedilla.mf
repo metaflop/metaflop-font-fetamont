@@ -1,0 +1,20 @@
+ffmchar("Tcedilla",13,ht#,acc_depth#);
+italcorr ht#*slant+.5u#;
+if .5w<>good.x .5w: change_width; fi
+lft x1=noise-eps;
+rt x2=w+noise;
+x3=.5w+noise;
+x4=.5w+noise;
+x5=.55w+noise;
+x6=.45w+noise;
+top y1=h+noise;
+top y2=h+noise;
+bot y4=noise-o;
+top y5=noise-.2d;
+bot y6=noise-d;
+z3=whatever[z1,z2];
+draw z1--z2; 
+draw z3--z4; 
+draw z5--z6;
+labels(1,2,3,4,5,6); 
+endchar;

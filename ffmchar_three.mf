@@ -1,0 +1,25 @@
+ffmchar("three",11,ht#,0);
+italcorr .8ht#*slant;
+x1=leftstemloc-ho+noise; 
+x8=leftstemloc-ho+noise; 
+w-x3=good.x(1.5u+s+noise);
+w-x6=good.x(2u+s+noise);
+x5=.618[x1,x2]+noise;
+x2=.55w+noise;
+x4=.55w+noise;
+x7=.55w+noise;
+bot y1=noise;
+bot y2=noise; 
+top y7=h+noise;
+top y8=h+noise;
+y4=barheight+.5noise; 
+y5=barheight+.5noise; 
+y3=.5[y2,y4]+noise;
+y6=.5[y4,y7]+noise;
+draw z1--z2
+ & half(z2,z2-z1,z3,randup,z4,z5-z4)
+ & z4--z5;
+draw half(z4,z4-z5,z6,randup,z7,z8-z7)
+ & z7--z8;
+labels(1,2,3,4,5,6,7,8); 
+endchar;

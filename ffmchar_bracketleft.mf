@@ -1,0 +1,13 @@
+ffmchar("bracketleft",8,ht#,comma_depth#);
+italcorr ht#*slant;
+x2=leftstemloc+noise;
+x3=leftstemloc+noise;
+w-x1=leftstemloc-ho+noise;
+w-x4=leftstemloc-ho+noise;
+top y1=h+noise;
+top y2=h+noise;
+bot y3=noise-d; 
+bot y4=noise-d; 
+draw z1--z2--z3--z4;
+labels(1,2,3,4); 
+endchar;
