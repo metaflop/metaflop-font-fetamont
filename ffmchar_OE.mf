@@ -21,7 +21,7 @@ z8=whatever[z2,z6];
 draw z1--z3
  & half(z3,z3-z1,z4,randup,z5,z7-z5)
  & z5--z7;
-draw z2--z6;
-draw z8--z9;
+draw z2--z8--z9;
+draw z6--z8;
 labels(1,2,3,4,5,6,7,8,9); 
 endchar;

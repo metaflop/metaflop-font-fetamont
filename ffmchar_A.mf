@@ -12,10 +12,8 @@ y4=barheight+noise;
 bot y5=noise-o;
 bot y6=0; %no noise
 z6=whatever[z4,z5];
-draw z1--z2
-  & half(z2,z2-z1,z3,randrt,z4,z5-z4)
-  & z4--z5;
-draw z2--z4;
+draw z1--z2--z4--z5;
+draw half(z2,z2-z1,z3,randrt,z4,z5-z4);
 charanchortops_[charcode]=(.5w,h);
 charanchorbots_[charcode]=z6;
 labels(1,2,3,4,5,6); 

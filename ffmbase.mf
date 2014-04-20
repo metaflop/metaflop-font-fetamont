@@ -18,11 +18,14 @@ if unknown slant: slant:=0 else: currenttransform:=
 ho#:=o#;                                % horizontal overshoot
 leftstemloc#:=2.5u#+s#;                 % position of left stem
 
-font_quad 18u#+2s#;
+font_coding_scheme "T1";
+font_slant slant;
 font_normal_space 6u#+2s#;
 font_normal_stretch 3u#;
 font_normal_shrink 2u#;
-font_coding_scheme "T1";
+font_x_height x_ht#;
+font_quad 18u#+2s#;
+font_extra_space 2u#;
 
 define_pixels(s,u);
 define_whole_pixels(xgap);
@@ -605,10 +608,8 @@ extra_endchar := extra_endchar&"charpictures_[charcode]:=currentpicture;"
  &"charitalcorrs_[charcode]=charic;";
 
 def ffmcombinedchar(expr namea,nameb,namec,anchor,height,depth) =
- widthb:=charwidths_[enc(nameb)+code_offset];
- charicb:=charitalcorrs_[enc(nameb)+code_offset];
- beginchar(enc(namea)+code_offset,widthb,height,depth);
- charic:=charicb;
+ beginchar(enc(namea)+code_offset,charwidths_[enc(nameb)+code_offset],height,depth);
+ charic:=charitalcorrs_[enc(nameb)+code_offset];
  addto currentpicture also charpictures_[enc(nameb)+code_offset];
  if anchor="top":
   addto currentpicture also charpictures_[enc(namec)] shifted 
@@ -891,7 +892,7 @@ input ffmchar_fi
 input ffmchar_fl
 input ffmchar_ffi
 input ffmchar_ffl
-input ffmchar_ij
+input ffmchar_ijlower
 % combined lowercase letters
 input ffmchar_Aacute
 input ffmchar_Agrave
