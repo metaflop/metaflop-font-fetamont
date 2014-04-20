@@ -1,0 +1,113 @@
+input ffmchar_dotaccent
+
+input ffmchar_quotesinglbase
+input ffmchar_guilsinglleft
+input ffmchar_guilsinglright
+input ffmchar_quotedblleft
+input ffmchar_quotedblright
+input ffmchar_quotedblbase
+input ffmchar_guillemotleft
+input ffmchar_guillemotright
+input ffmchar_endash
+input ffmchar_emdash
+input ffmchar_cwm
+
+input ffmchar_visiblespace
+input ffmchar_exclam
+input ffmchar_ampersand
+input ffmchar_quoteright
+input ffmchar_parenleft
+input ffmchar_parenright
+input ffmchar_plus
+input ffmchar_comma
+input ffmchar_hyphen
+input ffmchar_period
+input ffmchar_slash
+
+input ffmchar_zero
+input ffmchar_one
+input ffmchar_two
+input ffmchar_three
+input ffmchar_four
+input ffmchar_five
+input ffmchar_six
+input ffmchar_seven
+input ffmchar_eight
+input ffmchar_nine
+
+input ffmchar_colon
+input ffmchar_semicolon
+input ffmchar_question
+
+input ffmchar_A
+input ffmchar_B
+input ffmchar_C
+input ffmchar_D
+input ffmchar_E
+input ffmchar_F
+input ffmchar_G
+input ffmchar_H
+input ffmchar_I 
+input ffmchar_J
+input ffmchar_K
+input ffmchar_L
+input ffmchar_M
+input ffmchar_N
+input ffmchar_O
+input ffmchar_P
+input ffmchar_Q
+input ffmchar_R
+input ffmchar_S
+input ffmchar_T
+input ffmchar_U
+input ffmchar_V
+input ffmchar_W
+input ffmchar_X
+input ffmchar_Y
+input ffmchar_Z
+
+% now try again with lowercase settings
+ht#:=x_ht#;	% new characters height (for lowercase)
+u#:=.9u#;   % new unit width
+barheight#:=.5x_ht#;   % new height of bar lines (for lowercase)
+define_pixels(u); 
+define_good_y_pixels(barheight);
+code_offset:=ASCII"a" - ASCII"A";
+
+input ffmchar_A
+input ffmchar_B
+input ffmchar_C
+input ffmchar_D
+input ffmchar_E
+input ffmchar_F
+input ffmchar_G
+input ffmchar_H
+input ffmchar_I 
+input ffmchar_J
+input ffmchar_K
+input ffmchar_L
+input ffmchar_M
+input ffmchar_N
+input ffmchar_O
+input ffmchar_P
+input ffmchar_Q
+input ffmchar_R
+input ffmchar_S
+input ffmchar_T
+input ffmchar_U
+input ffmchar_V
+input ffmchar_W
+input ffmchar_X
+input ffmchar_Y
+input ffmchar_Z
+
+input ffmchar_ff
+input ffmchar_fi
+input ffmchar_fl
+input ffmchar_ffi
+input ffmchar_ffl
+
+% restore the most important things
+code_offset:=0;
+u#:=u#/.9;   
+define_pixels(u); 

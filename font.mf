@@ -1,3 +1,16 @@
+% The Fetamont typeface extends the Logo fonts to
+% complete the T1 encoding. The designs of the glyphs
+% A, E, F, M, N, O, P, S, T are based on the 
+% Metafont constructions by D. E. Knuth. 
+% The glyphs Y and 1 imitate the shapes of the
+% corresponding glyphs in the METATYPE1 logo
+% that is due to the METATYPE1 team (Boguslaw Jackowski, 
+% Janusz M. Nowacki and Piotr Strzelczyk).
+% There exists a LaTeX package for the Fetamont
+% typeface. Both the package and the typeface
+% are distributed under the terms of the 
+% LaTeX Project Public License (LPPL).
+
 font_size 10pt#;            % the "design size" of this font @hidden
 ht#:=6pt#;                  % height of characters           @hidden
 x_ht#:=4.5pt#;              % x-height of characters         $ 3 / 6
@@ -18,4 +31,7 @@ slant:=0;                   % slanting amount                $ -0.3 / 0.3
 craziness:=0pt;             % degree of haphazard variation  $ 0 / 0.3
 superness:=.8;              % parameter for superellipses    $ 0.6 / 1
 
-input ffmbase               % now generate the font
+input fontbase;             % now generate the font
+input glyphs;
+input ligkerndef;
+bye;              
