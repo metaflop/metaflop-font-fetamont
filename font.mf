@@ -16,20 +16,20 @@ ht#:=6pt#;                  % height of characters           @hidden
 x_ht#:=4.5pt#;              % x-height of characters         $ 3 / 6
 acc_ht#:=2pt#;              % height of the accents			 $ 1 / 3
 barheight#:=0.6x_ht#;       % height of bar lines            $ 0.2 / 0.8
-comma_depth#:=70/36pt#;     % depth of comma				 $ 1.5 / 2
+comma_depth#:=1.95pt#;      % depth of comma				 $ 1.5 / 2
 acc_depth#:=comma_depth#;   % depth of accents               @hidden
-u#:=4/9pt#;                 % unit width                     $ 0.1 / 1.5
+u#:=0.45pt#;                % unit width                     $ 0.1 / 1.5
 xgap#:=0.6pt#;              % horizontal adjustment          @hidden
 ygap#:=(ht#/13.5u#)*xgap#;  % vertical adjustment (N and M)  @hidden
 s#:=0pt#;                   % extra space at the sides       $ 0 / 0.5
-px#:=2/3pt#;                % horizontal thickness of pen    $ 0.1 / 1.5
+px#:=0.65pt#;               % horizontal thickness of pen    $ 0.1 / 1.5
 py#:=0.6pt#;                % vertical pen thickness         $ 0.1 / 1.5
 prot:=0;                    % rotation angle of the pen      $ 0 / 90
 o#:=5/27*(px#*cosd(prot)+py#*sind(prot)); % overshoot        @hidden
 dotincr:=.4;                % increasement of dot diameter   @hidden
 slant:=0;                   % slanting amount                $ -0.3 / 0.3
 craziness:=0pt;             % degree of haphazard variation  $ 0 / 0.3
-superness:=.8;              % parameter for superellipses    $ 0.6 / 1
+superness:=0.8;             % parameter for superellipses    $ 0.6 / 1
 
 input fontbase;             % now generate the font
 input glyphs;
