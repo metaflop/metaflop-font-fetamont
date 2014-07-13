@@ -616,17 +616,31 @@ enddef;
 % chain two chars like "f" and "l" to "fl"
 def ffmchainedchar(expr namea,nameb,namec) =
  beginchar(
+  enc(namea)+code_offset,
+  charwidths_[enc(nameb)+code_offset]
+  +charwidths_[enc(namec)+code_offset],
+  max(charheights_[enc(nameb)+code_offset],
+  +charheights_[enc(namec)+code_offset]),
+  max(chardepths_[enc(nameb)+code_offset],
+  +chardepths_[enc(namec)]+code_offset)
+ );
+ charic:=charitalcorrs_[enc(nameb)+code_offset]; 
+ addto currentpicture also charpictures_[enc(nameb)+code_offset];
+ addto currentpicture also charpictures_[enc(namec)+code_offset] 
+  shifted (charwidths_[enc(nameb)+code_offset]*hppp,0);
+ endchar;
+enddef;
+
+% copy a letter nameb to namea
+def ffmcopiedchar(expr namea,nameb) =
+ beginchar(
   enc(namea),
-  charwidths_[enc(nameb)]
-  +charwidths_[enc(namec)],
-  max(charheights_[enc(nameb)],
-  +charheights_[enc(namec)]),
-  max(chardepths_[enc(nameb)],
-  +chardepths_[enc(namec)])
+  charwidths_[enc(nameb)],
+  charheights_[enc(nameb)],
+  chardepths_[enc(nameb)]
  );
  charic:=charitalcorrs_[enc(nameb)]; 
  addto currentpicture also charpictures_[enc(nameb)];
- addto currentpicture also charpictures_[enc(namec)] shifted (charwidths_[enc(nameb)]*hppp,0);
  endchar;
 enddef;
 
@@ -769,4 +783,3 @@ def writeligtable = % write all kernings/ligatures at once
   endfor
  endgroup
 enddef;
-

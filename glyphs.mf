@@ -1,170 +1,11 @@
-% accents
-input ffmchar_acute
-input ffmchar_grave
-input ffmchar_dieresis
-input ffmchar_circumflex
-input ffmchar_tilde
-input ffmchar_hungarumlaut
-input ffmchar_ring
-input ffmchar_caron
-input ffmchar_breve
-input ffmchar_macron
-input ffmchar_dotaccent
-input ffmchar_cedilla
-input ffmchar_ogonek
-% punctation
-input ffmchar_visiblespace
-input ffmchar_period
-input ffmchar_colon
-input ffmchar_comma
-input ffmchar_semicolon
-input ffmchar_exclam
-input ffmchar_question	
-input ffmchar_parenleft
-input ffmchar_parenright
-input ffmchar_hyphen
-input ffmchar_emdash
-input ffmchar_endash
-input ffmchar_cwm
-input ffmchar_quotedbl
-input ffmchar_quoteleft
-input ffmchar_quoteright
-input ffmchar_quotedblleft
-input ffmchar_quotedblright
-input ffmchar_quotesinglbase
-input ffmchar_quotedblbase
-input ffmchar_guilsinglleft
-input ffmchar_guilsinglright
-input ffmchar_guillemotleft
-input ffmchar_guillemotright
-input ffmchar_percent
-input ffmchar_perthousandzero
-input ffmchar_slash
-input ffmchar_plus
-input ffmchar_equal
-input ffmchar_numbersign
-input ffmchar_dollar
-input ffmchar_ampersand
-input ffmchar_asterisk
-input ffmchar_less
-input ffmchar_greater
-input ffmchar_at
-input ffmchar_bracketleft
-input ffmchar_backslash
-input ffmchar_bracketright
-input ffmchar_asciicircum
-input ffmchar_underscore
-input ffmchar_braceleft
-input ffmchar_bar
-input ffmchar_braceright
-input ffmchar_asciitilde
-input ffmchar_dash
-input ffmchar_section
-input ffmchar_exclamdown
-input ffmchar_questiondown
-input ffmchar_sterling
-% uppercase letters
-input ffmchar_A
-input ffmchar_AE
-input ffmchar_B
-input ffmchar_C
-input ffmchar_D
-input ffmchar_Eth
-input ffmchar_E
-input ffmchar_F
-input ffmchar_G
-input ffmchar_H
-input ffmchar_I
-input ffmchar_J
-input ffmchar_K
-input ffmchar_L
-input ffmchar_Lslash
-input ffmchar_M
-input ffmchar_N
-input ffmchar_Eng
-input ffmchar_O
-input ffmchar_OE
-input ffmchar_P
-input ffmchar_Thorn
-input ffmchar_Q
-input ffmchar_R
-input ffmchar_S
-input ffmchar_Germandbls
-input ffmchar_T
-input ffmchar_U
-input ffmchar_V
-input ffmchar_W
-input ffmchar_X
-input ffmchar_Y
-input ffmchar_Z  
-% chained uppercase letters
-input ffmchar_IJ
-% combined uppercase letters
-input ffmchar_Aacute
-input ffmchar_Agrave
-input ffmchar_Adieresis
-input ffmchar_Acircumflex
-input ffmchar_Atilde
-input ffmchar_Aring
-input ffmchar_Abreve
-input ffmchar_Aogonek
-input ffmchar_Cacute
-input ffmchar_Ccaron
-input ffmchar_Ccedilla
-input ffmchar_Dcaron
-input ffmchar_Eacute
-input ffmchar_Egrave
-input ffmchar_Edieresis
-input ffmchar_Ecircumflex
-input ffmchar_Ecaron
-input ffmchar_Eogonek
-input ffmchar_Gbreve
-input ffmchar_Iacute
-input ffmchar_Igrave
-input ffmchar_Idieresis
-input ffmchar_Icircumflex
-input ffmchar_Idotaccent
-input ffmchar_Lacute
-input ffmchar_Lcaron
-input ffmchar_Nacute
-input ffmchar_Ntilde
-input ffmchar_Ncaron
-input ffmchar_Oacute
-input ffmchar_Ograve
-input ffmchar_Odieresis
-input ffmchar_Ocircumflex
-input ffmchar_Otilde
-input ffmchar_Ohungarumlaut
-input ffmchar_Oslash
-input ffmchar_Racute
-input ffmchar_Rcaron
-input ffmchar_Sacute
-input ffmchar_Scaron
-input ffmchar_Scedilla
-input ffmchar_Tcaron
-input ffmchar_Tcedilla
-input ffmchar_Uacute
-input ffmchar_Ugrave
-input ffmchar_Udieresis
-input ffmchar_Ucircumflex
-input ffmchar_Uhungarumlaut
-input ffmchar_Uring
-input ffmchar_Yacute
-input ffmchar_Ydieresis
-input ffmchar_Zacute
-input ffmchar_Zcaron
-input ffmchar_Zdotaccent
-% digits
-input ffmchar_zero
-input ffmchar_one
-input ffmchar_two
-input ffmchar_three
-input ffmchar_four
-input ffmchar_five
-input ffmchar_six
-input ffmchar_seven
-input ffmchar_eight
-input ffmchar_nine
+% general letters with no lowercase counterpart
+input ffmchars_ns_p % (preview)
+input ffmchars_ns_np % (nonpreview)
+% uppercase with lowercase counterpart
+input ffmchars_s_p % (preview)
+input ffmchars_s_np % (nonpreview)
+% uppercase with no lowercase counterpart
+ffmcombinedchar("Idotaccent","I","dotaccent","top",ht#+acc_ht#,0);
 
 % now try again with lowercase settings
 ht#:=x_ht#;	% new characters height (for lowercase)
@@ -172,112 +13,21 @@ u#:=.9u#;   % new unit width
 barheight#:=.5x_ht#;   % new height of bar lines (for lowercase)
 define_pixels(u); 
 define_good_y_pixels(barheight);
-
 code_offset:=ASCII"a" - ASCII"A";
 
-% majuscules (in lowercase positions)
-input ffmchar_A
-input ffmchar_AE
-input ffmchar_B
-input ffmchar_C
-input ffmchar_D
-input ffmchar_Eth
-input ffmchar_E
-input ffmchar_F
-input ffmchar_G
-input ffmchar_H
-input ffmchar_I
-input ffmchar_J
-input ffmchar_K
-input ffmchar_L
-input ffmchar_Lslash
-input ffmchar_M
-input ffmchar_N
-input ffmchar_Eng
-input ffmchar_O
-input ffmchar_OE
-input ffmchar_P
-input ffmchar_Thorn
-input ffmchar_Q
-input ffmchar_R
-input ffmchar_S
-input ffmchar_Germandbls
-input ffmchar_T
-input ffmchar_U
-input ffmchar_V
-input ffmchar_W
-input ffmchar_X
-input ffmchar_Y
-input ffmchar_Z  
-% chained lowercase letters
-input ffmchar_ff
-input ffmchar_fi
-input ffmchar_fl
-input ffmchar_ffi
-input ffmchar_ffl
-input ffmchar_ijlower
-% combined lowercase letters
-input ffmchar_Aacute
-input ffmchar_Agrave
-input ffmchar_Adieresis
-input ffmchar_Acircumflex
-input ffmchar_Atilde
-input ffmchar_Aring
-input ffmchar_Abreve
-input ffmchar_Aogonek
-input ffmchar_Cacute
-input ffmchar_Ccaron
-input ffmchar_Ccedilla
-input ffmchar_Dcaron
-input ffmchar_Eacute
-input ffmchar_Egrave
-input ffmchar_Edieresis
-input ffmchar_Ecircumflex
-input ffmchar_Ecaron
-input ffmchar_Eogonek
-input ffmchar_Gbreve
-input ffmchar_Iacute
-input ffmchar_Igrave
-input ffmchar_Idieresis
-input ffmchar_Icircumflex
-input ffmchar_Lacute
-input ffmchar_Lcaron
-input ffmchar_Nacute
-input ffmchar_Ntilde
-input ffmchar_Ncaron
-input ffmchar_Oacute
-input ffmchar_Ograve
-input ffmchar_Odieresis
-input ffmchar_Ocircumflex
-input ffmchar_Otilde
-input ffmchar_Ohungarumlaut
-input ffmchar_Oslash
-input ffmchar_Racute
-input ffmchar_Rcaron
-input ffmchar_Sacute
-input ffmchar_Scaron
-input ffmchar_Scedilla
-input ffmchar_Tcaron
-input ffmchar_Tcedilla
-input ffmchar_Uacute
-input ffmchar_Ugrave
-input ffmchar_Udieresis
-input ffmchar_Ucircumflex
-input ffmchar_Uhungarumlaut
-input ffmchar_Uring
-input ffmchar_Yacute
-input ffmchar_Ydieresis
-input ffmchar_Zacute
-input ffmchar_Zcaron
-input ffmchar_Zdotaccent
-% the dotless section (dotlessi, dotlessj)
-code_offset:=-48;
-input ffmchar_I
-input ffmchar_J
-% dstroke is here a smaller variant of Eth
-code_offset:=-50;
-input ffmchar_Eth
+input ffmchars_s_p % (preview)
+input ffmchars_s_np % (nonpreview)
+
 % restore the most important things
 code_offset:=0;
 u#:=u#/.9;   
 define_pixels(u); 
+
+ffmcopiedchar("dotlessi","i");
+ffmcopiedchar("dotlessj","j");
+ffmcopiedchar("dcroat","eth");
+ffmchainedchar("ff","f","f");
+ffmchainedchar("fi","f","i");
+ffmchainedchar("fl","f","l");
+ffmchainedchar("ffi","ff","i");
+ffmchainedchar("ffl","ff","l");

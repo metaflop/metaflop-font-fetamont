@@ -1,0 +1,318 @@
+% scalable letters (nonpreview)
+
+ffmchar("AE",22,ht#,0);
+italcorr .9ht#*slant;
+x1=leftstemloc+noise; 
+x2=leftstemloc+noise;
+x3=.5w+noise;
+x4=.5w+noise;
+x5=w-leftstemloc+o+noise;
+x6=w-leftstemloc+o-xgap+noise;
+x7=w-leftstemloc+o+noise;
+bot y1=noise-o;
+y2=barheight+noise;
+top y3=h+noise;
+bot y4=noise;
+top y5=h+noise;
+y6=barheight+noise;
+bot y7=noise;
+draw z1--z2--z6;
+draw arc(z2,z2-z1,z3,z5-z3);
+draw z5--z3--z4--z7;
+labels(1,2,3,4,5,6,7); 
+endchar;
+
+ffmchar("Eth",14,ht#,0);
+italcorr .9ht#*slant;
+x1=leftstemloc+noise;
+x2=leftstemloc+noise;
+x3=.5w+noise;
+x5=.5w+noise;
+w-x4=good.x(1.5u+s+noise);
+x6=eps+noise;
+x7=.5w+noise;
+bot y1=noise;
+bot y5=noise;
+top y2=h+noise;
+top y3=h+noise;
+y4=barheight+noise;
+y6=barheight+noise;
+y7=barheight+noise;
+draw z1--z2--z3
+ & half(z3,z3-z2,z4,-randup,z5,z1-z5)
+ & z5--cycle;
+draw z6--z7;
+charanchortops_[charcode]=(.5w,h);
+labels(1,2,3,4,5,6,7); 
+endchar;
+
+ffmchar("Lslash",13,ht#,0);
+x1=leftstemloc+noise;
+x2=leftstemloc+noise;
+w-x3=leftstemloc-ho+noise;
+lft x4=eps+noise;
+x5=.45w+noise;
+bot y1=noise; 
+bot y3=noise; 
+top y2=h+noise;
+y4=.4h+noise;
+z5=z4+whatever*dir(40);
+draw z3--z1--z2;
+draw z4--z5;
+charanchortops_[charcode]=(leftstemloc,h);
+charanchortoprights_[charcode]=(.5w,h);
+labels(1,2,3,4,5); 
+endchar;
+
+ffmchar("Eng",15,ht#,acc_depth#);
+italcorr .8ht#*slant;
+x1=leftstemloc+noise;
+x2=leftstemloc+noise;
+x4=w-leftstemloc+noise;
+x5=w-leftstemloc+noise;
+x6=.5w+noise;
+x7=.382w+noise;
+bot y1=noise-o;
+top y2=h+o+noise;
+y3=y4+ygap+noise;
+bot y4=noise-o;
+top y5=h+o+noise;
+bot y6=noise-d;
+bot y7=noise-d;
+z3=whatever[z4,z5];
+draw z1--z2--z3; 
+draw z7--z6 
+ & arc(z6,z6-z7,z4,z5-z4) 
+ & z4--z5; 
+charanchortops_[charcode]=(.5w,h);
+labels(1,2,3,4,5,6,7); 
+endchar;
+
+ffmchar("Oslash",15,ht#,0);
+italcorr ht#*slant;
+x1=.5w+noise;
+x2=good.x(1.5u+s+noise);
+x3=.5w+noise; 
+w-x4=good.x(1.5u+s+noise);  
+x5=good.x(1.5u+s+noise);
+w-x6=good.x(1.5u+s+noise);  
+top y1=h+o+noise; 
+y2=barheight+noise;
+bot y3=noise-o;
+y4=barheight+noise;
+bot y5=noise-o;
+top y6=h+o+noise;
+draw full(z1,-randrt,z2,-randup,z3,randrt,z4,randup);
+draw z5--z6;
+labels(1,2,3,4,5,6); 
+endchar;
+
+ffmchar("OE",22,ht#,0);
+italcorr .9ht#*slant;
+x2=.5w+noise;
+x4=good.x(1.5u+s+noise);
+x6=.5w+noise;
+x7=w-leftstemloc+o+noise;
+x9=w-leftstemloc+o-xgap+noise;
+x1=w-leftstemloc+o+noise;
+x3=.382w+noise;
+x5=.382w+noise;
+y4=barheight+noise;
+y8=barheight+noise;
+top y7=h+noise;
+y9=barheight+noise;
+bot y1=noise;
+bot y3=noise;
+top y5=h+noise;
+z2=whatever[z1,z3];
+z6=whatever[z5,z7];
+z8=whatever[z2,z6];
+draw z1--z3
+ & half(z3,z3-z1,z4,randup,z5,z7-z5)
+ & z5--z7;
+draw z2--z8--z9;
+draw z6--z8;
+labels(1,2,3,4,5,6,7,8,9); 
+endchar;
+
+ffmchar("Thorn",14,ht#,0);
+italcorr .7ht#*slant;
+x1=leftstemloc+noise;
+x2=leftstemloc+noise;
+x4=.618[x1,w-x1]+noise;
+x5=.618[x1,w-x1]+noise;
+x6=.5[w-x1,lft w]+noise; 
+bot y1=noise-o;
+top y2=h+noise; 
+y3=.764h+noise; 
+y4=.764h+noise; 
+y6=.5[y4,y5]+noise;
+y5=.382h+noise;
+y7=.382h+noise;
+z3=whatever[z1,z2];
+z7=whatever[z1,z2];
+draw z1--z2;
+draw z3--z4
+ & half(z4,z4-z3,z6,-randup,z5,z7-z5)
+ & z5--z7;
+labels(1,2,3,4,5,6,7); 
+endchar;
+
+ffmchar("Germandbls",15,ht#,0);
+italcorr .8ht#*slant;
+x1=leftstemloc+noise; 
+x2=leftstemloc+noise; 
+x3=.5w+noise; 
+x5=.5w+noise; 
+x7=.5w+noise; 
+w-x4=leftstemloc+noise; 
+w-x6=good.x(1.5u+s+noise);
+x8=.4w+noise; 
+bot y1=noise-o;
+bot y8=noise;
+y2=barheight+noise;
+top y3=h+o+noise;
+y5=barheight+noise;
+y4=.5[y5,y3]+noise;
+y6=.5[y7,y5]+noise;
+z7=z8+whatever*randrt;
+pair randira,randirb;
+randira:=randrt;
+randirb:=randrt;
+draw z1--z2
+ & arc(z2,randup,z3,randira)
+ & half(z3,randira,z4,-randup,z5,-randirb);
+draw half(z5,randirb,z6,-randup,z7,z8-z7)
+ & z7--z8;
+labels(1,2,3,4,5,6,7,8); 
+endchar;
+
+ffmchar("Tcedilla",13,ht#,acc_depth#);
+italcorr ht#*slant+.5u#;
+if .5w<>good.x .5w: change_width; fi
+lft x1=noise-eps;
+rt x2=w+noise;
+x3=.5w+noise;
+x4=.5w+noise;
+x5=.55w+noise;
+x6=.45w+noise;
+top y1=h+noise;
+top y2=h+noise;
+bot y4=noise-o;
+top y5=noise-.2d;
+bot y6=noise-d;
+z3=whatever[z1,z2];
+draw z1--z2; 
+draw z3--z4; 
+draw z5--z6;
+labels(1,2,3,4,5,6); 
+endchar;
+
+% chained uppercase letters
+
+ffmchainedchar("IJ","I","J");
+
+% combined uppercase letters
+
+ffmcombinedchar("Aacute","A","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Agrave","A","grave","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Adieresis","A","dieresis","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Acircumflex","A","circumflex","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Atilde","A","tilde","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Aring","A","ring","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Abreve","A","breve","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Aogonek","A","ogonek","bot",ht#,comma_depth#);
+
+ffmcombinedchar("Cacute","C","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ccaron","C","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ccedilla","C","cedilla","bot",ht#,acc_depth#);
+
+ffmcombinedchar("Dcaron","D","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Eacute","E","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Egrave","E","grave","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Edieresis","E","dieresis","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ecircumflex","E","circumflex","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ecaron","E","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Eogonek","E","ogonek","bot",ht#,comma_depth#);
+
+ffmcombinedchar("Gbreve","G","breve","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Iacute","I","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Igrave","I","grave","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Idieresis","I","dieresis","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Icircumflex","I","circumflex","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Lacute","L","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Lcaron","L","quoteright","topright",ht#+acc_ht#,0);
+
+ffmcombinedchar("Nacute","N","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ntilde","N","tilde","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ncaron","N","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Oacute","O","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ograve","O","grave","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Odieresis","O","dieresis","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ocircumflex","O","circumflex","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Otilde","O","tilde","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ohungarumlaut","O","hungarumlaut","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Racute","R","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Rcaron","R","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Sacute","S","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Scaron","S","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Scedilla","S","cedilla","bot",ht#,comma_depth#);
+
+ffmcombinedchar("Tcaron","T","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Uacute","U","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ugrave","U","grave","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Udieresis","U","dieresis","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ucircumflex","U","circumflex","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Uhungarumlaut","U","hungarumlaut","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Uring","U","ring","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Yacute","Y","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Ydieresis","Y","dieresis","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Zacute","Z","acute","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Zcaron","Z","caron","top",ht#+acc_ht#,0);
+
+ffmcombinedchar("Zdotaccent","Z","dotaccent","top",ht#+acc_ht#,0);
+
