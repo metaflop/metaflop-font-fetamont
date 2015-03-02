@@ -1,9 +1,9 @@
 % general letters with no lowercase counterpart
-input ffmchars_ns_p % (preview)
-input ffmchars_ns_np % (nonpreview)
+input glyphs/ffmchars_ns_p % (preview)
+input glyphs/ffmchars_ns_np % (nonpreview)
 % uppercase with lowercase counterpart
-input ffmchars_s_p % (preview)
-input ffmchars_s_np % (nonpreview)
+input glyphs/ffmchars_s_p % (preview)
+input glyphs/ffmchars_s_np % (nonpreview)
 % uppercase with no lowercase counterpart
 ffmcombinedchar("Idotaccent","I","dotaccent","top",ht#+acc_ht#,0);
 
@@ -15,8 +15,8 @@ define_pixels(u);
 define_good_y_pixels(barheight);
 code_offset:=ASCII"a" - ASCII"A";
 
-input ffmchars_s_p % (preview)
-input ffmchars_s_np % (nonpreview)
+input glyphs/ffmchars_s_p % (preview)
+input glyphs/ffmchars_s_np % (nonpreview)
 
 % restore the most important things
 code_offset:=0;

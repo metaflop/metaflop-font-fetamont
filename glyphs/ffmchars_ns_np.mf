@@ -1,0 +1,806 @@
+% nonscalable letters (nonpreview)
+
+% accents
+
+ffmchar("acute",6,x_ht#+acc_ht#,0);
+lft x1=.2w+noise; 
+rt x2=w+noise; 
+bot y1=.2[x_ht,h]+noise;
+top y2=h+o+noise;
+draw z1--z2;
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2); 
+endchar;
+
+ffmchar("grave",6,x_ht#+acc_ht#,0);
+lft x1=noise; 
+rt x2=.8w+noise; 
+top y1=h+o+noise;
+bot y2=.2[x_ht,h]+noise;
+draw z1--z2;
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2); 
+endchar;
+
+ffmchar("dieresis",8,x_ht#+acc_ht#,0);
+x1=x2=.5w-max(1.8u,(1+dotincr)*.7px)+noise; 
+x3=x4=.5w+max(1.8u,(1+dotincr)*.7px)+noise; 
+bot y1=.3[x_ht,h]+noise;
+y2=y1+dotincr*py;
+bot y3=.3[x_ht,h]+noise;
+y4=y3+dotincr*py;
+draw dotcircle(z1,z2);
+draw dotcircle(z3,z4);
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("circumflex",7,x_ht#+acc_ht#,0);
+lft x1=noise; 
+x2=.5w+noise;
+rt x3=w+noise; 
+bot y1=.2[x_ht,h]+noise;
+bot y3=.2[x_ht,h]+noise;
+top y2=h+o+noise;
+draw z1--z2--z3;
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3); 
+endchar;
+
+ffmchar("tilde",9,x_ht#+acc_ht#,0);
+lft x1=eps+noise; 
+x2=.3w+noise;
+x4=.7w+noise;
+x3=.5w+noise;
+rt x5=w-eps+noise; 
+bot y1=.2[x_ht,h]+noise;
+bot y4=.2[x_ht,h]+noise;
+top y2=h+noise;
+top y5=h+noise;
+y3=.6[x_ht,h]+noise;
+if angle direction 1 of (z2{right}...z3...z4{right}) < -90:
+ draw z1{randup}...z2{randrt}...z3{-randup}...z4{randrt}...z5{randup};
+else:
+ draw z1{randup}...z2{randrt}...z3...z4{randrt}...z5{randup};
+fi
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3,4,5); 
+endchar;
+
+ffmchar("hungarumlaut",11,x_ht#+acc_ht#,0);
+x2=.2w+noise; 
+x3=.8w+noise; 
+x1=.4w+noise; 
+x4=.6w+noise; 
+top y1=h+o+noise;
+top y3=h+o+noise;
+bot y2=.2[x_ht,h]+noise;
+bot y4=.2[x_ht,h]+noise;
+draw z1--z2;
+draw z3--z4;
+charanchortops_[charcode]=(.4w,x_ht);
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("ring",5,x_ht#+acc_ht#,0);
+lft x3=-o+noise; 
+rt x1=w+o+noise; 
+x2=.5w+noise;
+x4=.5w+noise;
+top y4=x_ht+o; %no noise because of Aring
+top y2=h+o+noise;
+y1=.5[y2,y4]+noise;
+y3=.5[y2,y4]+noise;
+draw full(z1,randup,z2,-randrt,z3,-randup,z4,randrt);
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("caron",7,x_ht#+acc_ht#,0);
+lft x1=noise; 
+x2=.5w+noise;
+rt x3=w+noise; 
+top y1=h+o+noise;
+top y3=h+o+noise;
+bot y2=.2[x_ht,h]+noise;
+draw z1--z2--z3;
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3); 
+endchar;
+
+ffmchar("breve",7,x_ht#+acc_ht#,0);
+lft x1=noise; 
+x2=.5w+noise;
+rt x3=w+noise; 
+top y1=h+o+noise;
+top y3=h+o+noise;
+bot y2=.2[x_ht,h]+noise;
+draw half(z1,-randup,z2,randrt,z3,randup);
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2,3); 
+endchar;
+
+ffmchar("macron",6,x_ht#+acc_ht#,0);
+lft x1=noise; 
+rt x2=w+noise; 
+y1=.5[x_ht,h]+noise;
+y2=.5[x_ht,h]+noise;
+draw z1--z2;
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2); 
+endchar;
+
+ffmchar("dotaccent",4,x_ht#+acc_ht#,0);
+x1=x2=.5w+noise; 
+bot y1=.5[x_ht,h]+noise;
+y2=y1+dotincr*py;
+draw dotcircle(z1,z2);
+charanchortops_[charcode]=(.5w,x_ht);
+labels(1,2); 
+endchar;
+
+ffmchar("cedilla",4,x_ht#,acc_depth#);
+x1=.5w; %no noise!
+lft x2=.2w+.5noise;
+rt x3=w+o+.5noise;
+x4=x2;
+lft x5=0;
+bot y1=0; %no noise!
+y2=.4[y1,y4];
+y3=.7[y1,y4];
+bot y4=noise-d;
+z5=z4+whatever*randrt;
+draw z5--z4
+ & half(z4,z4-z5,z3,randup,z2,-randrt)
+ & z2--z1;
+charanchorbots_[charcode]=z1;
+labels(1,2,3,4,5); 
+endchar;
+
+ffmchar("ogonek",4,x_ht#,acc_depth#);
+x1=.6w; %no noise!
+lft x2=-o+.5noise;
+rt x4=w+.5noise;
+x3=x4-.5u;
+bot y1=0; %no noise!
+y2=.7[y1,y4];
+bot y3=noise-d;
+z4=z3+whatever*randrt;
+pair randir;
+randir:=-randup;
+draw z1..tension infinity and 1..z2{randir}
+ & arc(z2,randir,z3,randrt)
+ & z3--z4;
+charanchorbots_[charcode]=z1;
+labels(1,2,3,4,5); 
+endchar;
+
+ffmchar("parenleft",8,ht#,comma_depth#);
+italcorr .8ht#*slant;
+x2=good.x(1.5u+s+noise);
+w-x1=leftstemloc-ho+noise;
+w-x3=leftstemloc-ho+noise;
+top y1=h+o+noise; 
+bot y3=noise-o-d;
+y2=.5[-d,h]+noise;
+draw half(z1,-randrt,z2,-randup,z3,randrt);
+labels(1,2,3); 
+endchar;
+
+ffmchar("parenright",8,ht#,comma_depth#);
+italcorr .8ht#*slant;
+w-x2=good.x(1.5u+s+noise);
+x1=leftstemloc-ho+noise;
+x3=leftstemloc-ho+noise;
+top y1=h+o+noise; 
+bot y3=noise-o-d;
+y2=.5[-d,h]+noise;
+draw half(z1,randrt,z2,-randup,z3,-randrt);
+labels(1,2,3); 
+endchar;
+
+ffmchar("quotedbl",8,ht#,0);
+italcorr ht#*slant;
+x1=leftstemloc+noise; 
+x2=leftstemloc+noise;
+x3=w-leftstemloc+noise; 
+x4=w-leftstemloc+noise;
+top y1=h+o+noise;
+top y3=h+o+noise;
+y2=.5[barheight,x_ht]+noise;
+y4=.5[barheight,x_ht]+noise;
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("quoteleft",5,ht#,0);
+italcorr ht#*slant;
+x1=.4w+noise; 
+x2=.6w+noise; 
+top y1=h+o+noise;
+y2=.5[barheight,x_ht]+noise;
+draw z1--z2;
+labels(1,2); 
+endchar;
+
+ffmchar("quoteright",5,ht#,0);
+italcorr ht#*slant;
+x1=.4w+noise; 
+x2=.6w+noise; 
+top y2=h+o+noise;
+y1=.5[barheight,x_ht]+noise;
+draw z1--z2;
+charanchortoprights_[charcode]=(.5w,h);
+labels(1,2); 
+endchar;
+
+ffmchar("quotedblleft",6,ht#,0);
+italcorr ht#*slant;
+x1=.2w+noise; 
+x4=.8w+noise; 
+x2=.3w+noise; 
+x3=.7w+noise; 
+top y1=h+o+noise;
+top y3=h+o+noise;
+y2=.5[barheight,x_ht]+noise;
+y4=.5[barheight,x_ht]+noise;
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("quotedblright",6,ht#,0);
+italcorr ht#*slant;
+x2=.2w+noise; 
+x3=.8w+noise; 
+x1=.3w+noise; 
+x4=.7w+noise; 
+top y1=h+o+noise;
+top y3=h+o+noise;
+y2=.5[barheight,x_ht]+noise;
+y4=.5[barheight,x_ht]+noise;
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("quotesinglbase",3,x_ht#,comma_depth#);
+x1=.4w+noise; 
+x2=.6w+noise;
+bot y1=noise-d-o; 
+y2=-d+ht-.5[barheight,x_ht]+noise;
+draw z1--z2;
+labels(1,2); 
+endchar;
+
+ffmchar("quotedblbase",6,x_ht#,comma_depth#);
+x2=.3w+noise; 
+x3=.7w+noise; 
+x1=.2w+noise; 
+x4=.8w+noise; 
+bot y1=noise-d-o; 
+bot y3=noise-d-o; 
+y2=-d+ht-.5[barheight,x_ht]+noise;
+y4=-d+ht-.5[barheight,x_ht]+noise;
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("guilsinglleft",7,x_ht#,0);
+italcorr x_ht#*slant;
+x1=good.x(w-2u-s+noise); 
+x2=good.x(2u+s+noise); 
+x3=good.x(w-2u-s+noise); 
+top y1=h+o+noise;
+bot y3=noise;
+y2=.5h+noise;
+draw z1--z2--z3;
+labels(1,2,3); 
+endchar;
+
+ffmchar("guilsinglright",7,x_ht#,0);
+italcorr .7x_ht#*slant;
+x1=good.x(2u+s+noise); 
+x2=good.x(w-2u-s+noise); 
+x3=good.x(2u+s+noise); 
+top y1=h+o+noise;
+bot y3=noise;
+y2=.5h+noise;
+draw z1--z2--z3;
+labels(1,2,3); 
+endchar;
+
+ffmchar("guillemotleft",10,x_ht#,0);
+italcorr x_ht#*slant;
+x1=.4w+noise; 
+x2=good.x(2u+s+noise); 
+x3=.4w+noise; 
+x4=good.x(w-2u-s+noise); 
+x5=.6w+noise; 
+x6=good.x(w-2u-s+noise); 
+top y1=h+o+noise;
+bot y3=noise;
+y2=.5h+noise;
+top y4=h+o+noise;
+bot y6=noise;
+y5=.5h+noise;
+draw z1--z2--z3;
+draw z4--z5--z6;
+labels(1,2,3,4,5,6); 
+endchar;
+
+ffmchar("guillemotright",10,x_ht#,0);
+italcorr .7x_ht#*slant;
+x1=good.x(2u+s+noise); 
+x2=.4w+noise; 
+x3=good.x(2u+s+noise); 
+x4=.6w+noise; 
+x5=good.x(w-2u-s+noise); 
+x6=.6w+noise; 
+top y1=h+o+noise;
+bot y3=noise;
+y2=.5h+noise;
+top y4=h+o+noise;
+bot y6=noise;
+y5=.5h+noise;
+draw z1--z2--z3;
+draw z4--z5--z6;
+labels(1,2,3,4,5,6); 
+endchar;
+
+ffmchar("percent",16,ht#,0);
+italcorr .8ht#*slant;
+x5=good.x(1.5u+s+noise);
+w-x7=good.x(1.5u+s+noise); 
+x1=.2w+noise; 
+x2=.8w+noise; 
+x3=6.5u+s+noise;
+x4=4u+s+noise;
+x6=4u+s+noise;
+w-x8=4u+s+noise;
+w-x9=6.5u+s+noise;
+w-x10=4u+s+noise;
+bot y1=noise-o;
+top y2=h+o+noise; 
+y3=.8h+noise;
+top y4=h+o+noise;
+y5=.8h+noise;
+bot y6=.6h-o+noise;
+y7=.2h+noise;
+top y8=.4h+o+noise;
+y9=.2h+noise;
+bot y10=noise-o;
+draw z1--z2;
+draw full(z3,randup,z4,-randrt,z5,-randup,z6,randrt);
+draw full(z7,randup,z8,-randrt,z9,-randup,z10,randrt);
+labels(1,2,3,4,5,6,7,8,9,10); 
+endchar;
+
+ffmchar("perthousandzero",8,ht#,0);
+x3=good.x(1.5u+s+noise);
+w-x1=good.x(1.5u+s+noise); 
+x2=.5w+noise;
+x4=.5w+noise;
+y1=.2h+noise;
+top y2=.4h+o+noise;
+y3=.2h+noise;
+bot y4=noise-o;
+draw full(z1,randup,z2,-randrt,z3,-randup,z4,randrt);
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("slash",10,ht#,comma_depth#);
+italcorr ht#*slant;
+x1=good.x(2u+s+noise);
+x2=good.x(w-2u-s+noise);
+bot y1=noise-d-o; 
+top y2=h+o+noise;
+draw z1--z2;
+labels(1,2); 
+endchar;
+
+ffmchar("plus",15,x_ht#,0);
+italcorr .5x_ht#*slant;
+x1=good.x(2u+s+noise);
+x2=good.x(w-2u-s+noise);
+x3=.5w+noise;
+x4=.5w+noise;
+y1=.5h+noise; 
+y2=.5h+noise; 
+y3=noise-o; 
+y4=h+o+noise; 
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("equal",15,x_ht#,0);
+italcorr .8x_ht#*slant;
+x1=good.x(2u+s+noise);
+x2=good.x(w-2u-s+noise);
+x3=good.x(2u+s+noise);
+x4=good.x(w-2u-s+noise);
+y1=.3h+noise; 
+y2=.3h+noise; 
+y3=.8h+noise; 
+y4=.8h+noise; 
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("numbersign",15,ht#,comma_depth#);
+italcorr .8ht#*slant;
+x1=good.x(2u+s+noise);
+x2=good.x(w-2u-s+noise);
+x3=good.x(2u+s+noise);
+x4=good.x(w-2u-s+noise);
+x5=.25w+noise;
+x6=.45w+noise;
+x7=.55w+noise;
+x8=.75w+noise;
+y1=.3x_ht+noise; 
+y2=.3x_ht+noise; 
+y3=.8x_ht+noise; 
+y4=.8x_ht+noise; 
+bot y5=1.1x_ht-h-o+noise;
+top y6=h+o+noise;
+bot y7=1.1x_ht-h-o+noise;
+top y8=h+o+noise;
+draw z1--z2;
+draw z3--z4;
+draw z5--z6;
+draw z7--z8;
+labels(1,2,3,4,5,6,7,8); 
+endchar;
+
+ffmchar("dollar",11,ht#,0);
+italcorr .7ht#*slant;
+x3=good.x(1.5u+s+noise);
+x8=good.x(1.5u+s+noise);
+w-x1=leftstemloc+noise;
+w-x6=good.x(1.5u+s+noise);
+x2=.382[x3,x6]+noise;
+x4=.382[x3,x6]+noise;
+x5=.618[x3,x6]+noise;
+x7=.618[x3,x6]+noise;
+x9=.5w+noise;
+x10=.5w+noise;
+top y1=h+noise; 
+top y2=h+noise; 
+y3=.6[y2,y4]+noise; 
+y4=barheight+noise; 
+y5=barheight+noise; 
+y6=.5[y5,y7]+noise; 
+bot y7=noise;
+bot y8=noise;
+top y9=noise;
+bot y10=h+noise;
+draw z1--z2 
+ & half(z2,z2-z1,z3,-randup,z4,z5-z4)
+ & z4--z5 
+ & half(z5,z5-z4,z6,-randup,z7,z8-z7) 
+ & z7--z8;
+draw z9--z10;
+labels(1,2,3,4,5,6,7,8,9,10); 
+endchar;
+
+ffmchar("asterisk",12,ht#,0);
+numeric outerradius,innerradius;
+outerradius=.5w-2u-s;
+innerradius=px;
+path outercircle,innercircle;
+outercircle=(.5w,h+o+noise)..(.5w,h-2*outerradius)..cycle;
+innercircle=(.5w,h+o+noise-outerradius+innerradius)
+ ..(.5w,h+o+noise-outerradius-innerradius)..cycle;
+z1=point 0 of outercircle+(noise,noise);
+z2=point 0 of innercircle;
+z3=point .4 of outercircle+(noise,noise);
+z4=point .4 of innercircle;
+z5=point .8 of outercircle+(noise,noise);
+z6=point .8 of innercircle;
+z7=point 1.2 of outercircle+(noise,noise);
+z8=point 1.2 of innercircle;
+z9=point 1.6 of outercircle+(noise,noise);
+z10=point 1.6 of innercircle;
+draw z1--z2;
+draw z3--z4;
+draw z5--z6;
+draw z7--z8;
+draw z9--z10;
+labels(1,2,3,4,5,6,7,8,9,10); 
+endchar;
+
+ffmchar("less",12,x_ht#,0);
+italcorr x_ht#*slant;
+x1=good.x(w-2u-s+noise); 
+x2=good.x(2u+s+noise); 
+x3=good.x(w-2u-s+noise); 
+top y1=h+o+noise;
+bot y3=noise;
+y2=.5h+noise;
+draw z1--z2--z3;
+labels(1,2,3); 
+endchar;
+
+ffmchar("greater",12,x_ht#,0);
+italcorr .5x_ht#*slant;
+x1=good.x(2u+s+noise); 
+x2=good.x(w-2u-s+noise); 
+x3=good.x(2u+s+noise); 
+top y1=h+o+noise;
+bot y3=noise;
+y2=.5h+noise;
+draw z1--z2--z3;
+labels(1,2,3); 
+endchar;
+
+ffmchar("at",16,ht#,0);
+italcorr .8ht#*slant;
+x10=good.x(1.5u+s+noise);
+w-x8=good.x(1.5u+s+noise); 
+w-x7=1.5u+s+noise;
+x2=.5w+noise;
+x4=.5w+.5noise; 
+x9=.5w+noise;
+x11=.5w+noise;
+x1=.65w+noise;
+x5=.65w+.5noise;
+x3=.35w+noise;
+x6=.5[x1,x7];
+top y9=h+o+noise; 
+bot y11=noise-o;
+y8=.5h+noise;
+y10=.5h+noise;
+y3=.5h+noise;
+y1=.33h+noise;
+y2=.33h+noise;
+y7=.33h+noise;
+y4=.67h+.5noise;
+y5=.67h+.5noise;
+y6=.15h+noise;
+pair randir;
+randir=-randup;
+draw z1--z2 
+ & half(z2,z2-z1,z3,randup,z4,z5-z4)
+ & z4--z5--z1 
+ & half(z1,z1-z5,z6,randrt,z7,z8-z7)
+ & z7--z8
+ & half(z8,z8-z7,z9,-randrt,z10,randir)
+ & arc(z10,randir,z11,randrt);
+labels(1,2,3,4,5,6,7,8,9,10,11); 
+endchar;
+
+ffmchar("bracketleft",8,ht#,comma_depth#);
+italcorr ht#*slant;
+x2=leftstemloc+noise;
+x3=leftstemloc+noise;
+w-x1=leftstemloc-ho+noise;
+w-x4=leftstemloc-ho+noise;
+top y1=h+noise;
+top y2=h+noise;
+bot y3=noise-d; 
+bot y4=noise-d; 
+draw z1--z2--z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("backslash",10,ht#,comma_depth#);
+x1=good.x(2u+s+noise);
+x2=good.x(w-2u-s+noise);
+bot y2=noise-d-o; 
+top y1=h+o+noise;
+draw z1--z2;
+labels(1,2); 
+endchar;
+
+ffmchar("bracketright",8,ht#,comma_depth#);
+italcorr ht#*slant;
+w-x2=leftstemloc+noise;
+w-x3=leftstemloc+noise;
+x1=leftstemloc-ho+noise;
+x4=leftstemloc-ho+noise;
+top y1=h+noise;
+top y2=h+noise;
+bot y3=noise-d; 
+bot y4=noise-d; 
+draw z1--z2--z3--z4;
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("asciicircum",8,ht#,0);
+lft x1=eps+noise; 
+x2=.5w+noise;
+rt x3=w-eps+noise; 
+bot y1=x_ht+noise;
+bot y3=x_ht+noise;
+top y2=h+o+noise;
+draw z1--z2--z3;
+labels(1,2,3); 
+endchar;
+
+ffmchar("underscore",16,0,comma_depth#);
+x1=0; 
+x2=w;
+bot y1=-.8d;
+bot y2=-.8d;
+draw z1--z2;
+labels(1,2); 
+endchar;
+
+ffmchar("braceleft",8,ht#,comma_depth#);
+italcorr ht#*slant;
+w-x1=leftstemloc-ho+noise;
+w-x5=leftstemloc-ho+noise;
+x2=leftstemloc+noise;
+x4=leftstemloc+noise;
+lft x3=eps+noise;
+top y1=h+o+noise; 
+bot y5=noise-o-d;
+y3=.5[-d,h]+noise;
+y2=.75[-d,h]+noise;
+y4=.25[-d,h]+noise;
+pair randira;
+randira=randrt;
+draw half(z1,-randrt,z2,-randup,z3,-randira);
+draw half(z3,randira,z4,-randup,z5,randrt);
+labels(1,2,3,4,5); 
+endchar;
+
+ffmchar("bar",5,ht#,comma_depth#);
+x1=.5w+noise; 
+x2=.5w+noise; 
+top y1=h+o+noise;
+bot y2=noise-d-o; 
+draw z1--z2; 
+labels(1,2); 
+endchar;
+
+ffmchar("braceright",8,ht#,comma_depth#);
+italcorr .8ht#*slant;
+x1=leftstemloc-ho+noise;
+x5=leftstemloc-ho+noise;
+w-x2=leftstemloc+noise;
+w-x4=leftstemloc+noise;
+rt x3=w-eps+noise;
+top y1=h+o+noise; 
+bot y5=noise-o-d;
+y3=.5[-d,h]+noise;
+y2=.75[-d,h]+noise;
+y4=.25[-d,h]+noise;
+pair randira;
+randira=randrt;
+draw half(z1,randrt,z2,-randup,z3,randira);
+draw half(z3,-randira,z4,-randup,z5,-randrt);
+labels(1,2,3,4,5); 
+endchar;
+
+ffmchar("asciitilde",11,x_ht#,0);
+lft x1=eps+noise; 
+x2=.3w+noise;
+x4=.7w+noise;
+x3=.5w+noise;
+rt x5=w-eps+noise;
+bot y1=.5h+noise;
+bot y4=.5h+noise;
+top y2=h+noise;
+top y5=h+noise;
+y3=.75h+noise;
+if angle direction 1 of (z2{right}...z3...z4{right}) < -90:
+ draw z1{randup}...z2{randrt}
+  ...z3{-randup}...z4{randrt}...z5{randup};
+else:
+ draw z1{randup}...z2{randrt}
+  ...z3...z4{randrt}...z5{randup};
+fi
+labels(1,2,3,4,5); 
+endchar;
+
+ffmchar("dash",6,x_ht#,0);
+italcorr .618x_ht#*slant;
+lft x1=noise; 
+rt x2=w+noise;
+y1=.618h+noise;
+y2=.618h+noise;
+draw z1--z2;
+labels(1,2); 
+endchar;
+
+ffmchar("section",10,ht#,comma_depth#);
+italcorr .5ht#*slant;
+x1=.5w+noise;
+x2=good.x(2u+s+noise);
+x3=.5w+noise; 
+w-x4=good.x(2u+s+noise);  
+x5=good.x(1.5u+s+noise);
+x6=.5w+noise;
+w-x7=leftstemloc+noise;
+w-x8=good.x(1.5u+s+noise);  
+x9=.5w+noise;
+x10=leftstemloc+noise;
+y1=.65[-d,h]+noise; 
+y2=.5[-d,h]+noise; 
+y3=.35[-d,h]+noise; 
+y4=.5[-d,h]+noise; 
+y5=.5[y1,y6]+noise; 
+top y6=h+noise; 
+top y7=h+noise; 
+y8=.5[y4,y9]+noise; 
+bot y9=noise-d; 
+bot y10=noise-d; 
+pair randira,randirb;
+randira=-randrt;
+randirb=randrt;
+draw full(z1,randira,z2,-randup,z3,randirb,z4,randup);
+draw half(z1,randira,z5,randup,z6,z7-z6) & z6--z7;
+draw half(z3,randirb,z8,-randup,z9,z10-z9) & z9--z10;
+charanchortops_[charcode]=(.5w,h);
+labels(1,2,3,4,5,6,7,8,9,10); 
+endchar;
+
+ffmchar("exclamdown",5,ht#-comma_depth#,comma_depth#);
+italcorr .8(ht#-comma_depth#)*slant;
+x1=x2=.5w+noise; 
+x3=.5w+noise; 
+x4=.5w+noise; 
+top y1=h+o+noise; 
+y2=y1-dotincr*py;
+bot y4=noise-d-o;
+top y3=min(h-.618barheight,bot y2-eps)+noise; 
+draw dotcircle(z1,z2);
+draw z3--z4; 
+labels(1,2,3,4); 
+endchar;
+
+ffmchar("questiondown",12,ht#-comma_depth#,comma_depth#);
+w-x1=good.x(1.5u+s+noise);
+x3=good.x(2u+s+noise);
+x5=.618[x3,x1]+noise; 
+x2=.618[x1,x3]+noise; 
+x4=.618[x1,x3]+noise; 
+x6=x7=.618[x3,x1]+noise; 
+bot y1=noise-d; 
+bot y2=noise-d; 
+top y6=h+o+noise;
+y7=y6-dotincr*py;
+top y5=min(h-.618barheight,bot y7-eps)+noise; 
+y4=.8[y2,y5]+noise;
+y3=.5[y2,y4]+noise;
+pair randir;
+randir:=-randrt;
+draw arc(z5,-randup,z4,randir)
+ & half(z4,randir,z3,-randup,z2,z1-z2)
+ & z2--z1;
+draw dotcircle(z6,z7);
+labels(1,2,3,4,5,6,7); 
+endchar;
+
+ffmchar("sterling",11,ht#,0);
+italcorr .8ht#*slant;
+x5=good.x(1.5u+s+noise);
+x7=good.x(1.5u+s+noise);
+rt x6=w-eps+noise;
+x1=w-leftstemloc+o+noise;
+x8=w-leftstemloc+o-xgap+noise;
+x2=.618[x5,x1]+noise;
+x3=.618[x2,x5]+noise;
+x4=.618[x2,x5]+noise;
+top y1=h+noise;
+bot y5=noise; 
+bot y6=noise; 
+y7=barheight+noise;
+y8=barheight+noise;
+y4=barheight+noise;
+y3=.5[barheight,h]+noise;
+z2=z1+whatever*randir;
+draw z1--z2
+ & arc(z2,z2-z1,z3,z4-z3)
+ & z3--z4
+ & arc(z4,z4-z3,z5,z5-z6);
+draw z5--z6;
+draw z7--z8;
+labels(1,2,3,4,5,6,7,8); 
+endchar;
+

@@ -1,7 +1,7 @@
 % general letters with no lowercase counterpart
-input ffmchars_ns_p % (preview)
+input glyphs/ffmchars_ns_p % (preview)
 % uppercase with lowercase counterpart
-input ffmchars_s_p % (preview)
+input glyphs/ffmchars_s_p % (preview)
 
 % now try again with lowercase settings
 ht#:=x_ht#;	% new characters height (for lowercase)
@@ -11,7 +11,7 @@ define_pixels(u);
 define_good_y_pixels(barheight);
 code_offset:=ASCII"a" - ASCII"A";
 
-input ffmchars_s_p % (preview)
+input glyphs/ffmchars_s_p % (preview)
 
 % restore the most important things
 code_offset:=0;
