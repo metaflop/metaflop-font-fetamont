@@ -1,9 +1,0 @@
-ffmchar("quoteleft",5,ht#,0);
-italcorr ht#*slant;
-x1=.4w+noise; 
-x2=.6w+noise; 
-top y1=h+o+noise;
-y2=.5[barheight,x_ht]+noise;
-draw z1--z2;
-labels(1,2); 
-endchar;

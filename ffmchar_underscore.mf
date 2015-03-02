@@ -1,8 +1,0 @@
-ffmchar("underscore",16,0,comma_depth#);
-x1=0; 
-x2=w;
-bot y1=-.8d;
-bot y2=-.8d;
-draw z1--z2;
-labels(1,2); 
-endchar;

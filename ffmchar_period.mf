@@ -1,7 +1,0 @@
-ffmchar("period",5,x_ht#,0);
-x1=x2=.5w+noise; 
-bot y1=noise-o;
-y2=y1+dotincr*py;
-draw dotcircle(z1,z2);
-labels(1,2); 
-endchar;

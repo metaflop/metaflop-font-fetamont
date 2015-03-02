@@ -1,1 +1,0 @@
-ffmcombinedchar("Ccedilla","C","cedilla","bot",ht#,acc_depth#);

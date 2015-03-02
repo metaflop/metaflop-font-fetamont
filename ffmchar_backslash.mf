@@ -1,8 +1,0 @@
-ffmchar("backslash",10,ht#,comma_depth#);
-x1=good.x(2u+s+noise);
-x2=good.x(w-2u-s+noise);
-bot y2=noise-d-o; 
-top y1=h+o+noise;
-draw z1--z2;
-labels(1,2); 
-endchar;

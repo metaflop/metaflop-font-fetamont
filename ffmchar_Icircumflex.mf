@@ -1,1 +1,0 @@
-ffmcombinedchar("Icircumflex","I","circumflex","top",ht#+acc_ht#,0);

@@ -1,1 +1,0 @@
-ffmcombinedchar("Atilde","A","tilde","top",ht#+acc_ht#,0);

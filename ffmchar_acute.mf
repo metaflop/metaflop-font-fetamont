@@ -1,9 +1,0 @@
-ffmchar("acute",6,x_ht#+acc_ht#,0);
-lft x1=.2w+noise; 
-rt x2=w+noise; 
-bot y1=.2[x_ht,h]+noise;
-top y2=h+o+noise;
-draw z1--z2;
-charanchortops_[charcode]=(.5w,x_ht);
-labels(1,2); 
-endchar;

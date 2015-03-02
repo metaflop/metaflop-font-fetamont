@@ -1,9 +1,0 @@
-ffmchar("hyphen",6,x_ht#,0);
-italcorr .618x_ht#*slant;
-lft x1=noise; 
-rt x2=w+noise;
-y1=.618h+noise;
-y2=.618h+noise;
-draw z1--z2;
-labels(1,2); 
-endchar;

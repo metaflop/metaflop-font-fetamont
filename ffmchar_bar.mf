@@ -1,8 +1,0 @@
-ffmchar("bar",5,ht#,comma_depth#);
-x1=.5w+noise; 
-x2=.5w+noise; 
-top y1=h+o+noise;
-bot y2=noise-d-o; 
-draw z1--z2; 
-labels(1,2); 
-endchar;

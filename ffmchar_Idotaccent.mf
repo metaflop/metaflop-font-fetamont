@@ -1,1 +1,0 @@
-ffmcombinedchar("Idotaccent","I","dotaccent","top",ht#+acc_ht#,0);

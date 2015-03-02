@@ -1,1 +1,0 @@
-ffmcombinedchar("Egrave","E","grave","top",ht#+acc_ht#,0);

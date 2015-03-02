@@ -1,1 +1,0 @@
-ffmcombinedchar("Lcaron","L","quoteright","topright",ht#+acc_ht#,0);

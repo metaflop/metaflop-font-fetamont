@@ -1,9 +1,0 @@
-ffmchar("grave",6,x_ht#+acc_ht#,0);
-lft x1=noise; 
-rt x2=.8w+noise; 
-top y1=h+o+noise;
-bot y2=.2[x_ht,h]+noise;
-draw z1--z2;
-charanchortops_[charcode]=(.5w,x_ht);
-labels(1,2); 
-endchar;

@@ -1,1 +1,0 @@
-ffmcombinedchar("Lacute","L","acute","top",ht#+acc_ht#,0);

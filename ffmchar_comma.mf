@@ -1,8 +1,0 @@
-ffmchar("comma",6,x_ht#,comma_depth#);
-x1=leftstemloc; 
-x2=w-x1;
-top y2=.382barheight;
-bot y1=-d;
-draw z1--z2;
-labels(1,2); 
-endchar;

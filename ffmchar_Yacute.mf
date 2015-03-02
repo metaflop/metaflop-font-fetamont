@@ -1,1 +1,0 @@
-ffmcombinedchar("Yacute","Y","acute","top",ht#+acc_ht#,0);
