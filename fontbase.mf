@@ -553,12 +553,13 @@ enddef;
 
 % the randomization is fixed
 % but still special for every style
-fixedseed:=2.71828designsize;
-for i=1 upto length font_identifier_: 
- fixedseed:=fixedseed
-  +sqrt(ASCII(substring (i-1,i) of font_identifier_));
-endfor
-randomseed:=fixedseed;
+% This is not funny for metaflop!
+%fixedseed:=2.71828designsize;
+%for i=1 upto length font_identifier_: 
+% fixedseed:=fixedseed
+%  +sqrt(ASCII(substring (i-1,i) of font_identifier_));
+%endfor
+%randomseed:=fixedseed;
 
 vardef noise =
  normaldeviate*craziness
