@@ -1,0 +1,36 @@
+% Copyright (c) 2017 by Linus Romer as part of the METAFLOP project by
+% Marco Müller, Alexis Reigl and Linus Romer. This work may be 
+% distributed and/or modified under the conditions of the LaTeX Project 
+% Public License, either version 1.3 of this license or (at your option) 
+% any later version. The latest version of this license is in
+% http://www.latex-project.org/lppl.txt and version 1.3 or later is part 
+% of all distributions of LaTeX version 2005/12/01 or later."
+
+font_familyname "Funtauna";    % font family name          @hidden
+font_coding_scheme "Unicode";  % the font encoding         @hidden
+font_size 10pt#;               % the "design size"         @hidden
+font_normal_space .36designsize; % space width             @hidden
+font_slant_:=0;                % general slanting          $ -0.3 / 0.3
+u#:=designsize/1000;           % horizontal unit           @hidden
+ht#:=0.7designsize;            % height of H,I,...         $ 0.5 / 0.9
+ht_x#:=0.45designsize;         % height of x,v,w,...       $ 0.3 / 0.6
+ht_asc#:=0.7designsize;        % height of h,l,...         $ 0.6 / 0.9
+ht_acc#:=0.21designsize;       % accent height above       @ hidden
+ht_math#:=.25designsize;       % height of minus           @ hidden
+depth_desc#:=0.2designsize;    % depth of descenders       $ 0.1 / 0.4
+dotsize#:=.08designsize;       % dotsize of i, period...   $ 0.05 / 0.15
+gap#:=0.05designsize;          % side bearing of i,h,l,... $ 0.00 / 0.10
+stem#:=0.07designsize;         % stem width                $ 0.01 / 0.12
+band#:=0.06designsize;         % horizontal band width     $ 0.01 / 0.11
+jut#:=0.07designsize;          % protrusion of serifs      $ 0.01 / 0.13
+gap_cap#:=0.9gap#;             % side bearing of I,H,L,... @hidden
+stem_cap#:=1.1stem#;           % stem width of H,I,...     @hidden
+band_cap#:=band#;              % horizontal band width     @hidden
+jut_cap#:=1.1jut#;             % protrusion of serifs      @hidden
+superness:=1;                  % parameter for arcs        $ 0.5 / 1
+monovalue:=0;                  % is the font monospaced?   @hidden
+         
+input fontbase;                % now generate the font
+mode_setup; font_setup;        
+input glyphs; 
+bye.

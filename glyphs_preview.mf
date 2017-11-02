@@ -1,0 +1,3067 @@
+% A
+newchar("0041",560u#+stem_cap#,ht#,0,
+ .1gap_cap#+.7jut_cap#,.1gap_cap#+.7jut_cap#);
+z1l=(l,0); 
+z4r=(r,0); 
+z5=(.5[x1l,x4r],h-band_cap);
+y2r=y3l=h; 
+posin1(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin4(1,.9stem_cap,1,x5-x4r,y5-y4r);
+z2r=whatever[z1r,z5];
+z3l=whatever[z4l,z5];
+posin2(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin3(1,.9stem_cap,1,x5-x4r,y5-y4r);
+y6r=y7r=.36h+band_cap;
+pos6(band_cap,right,angle(z2-z1)); 
+pos7(band_cap,right,angle(z3-z4)); 
+z6=whatever[z1,z2];
+z7=whatever[z3,z4]; 
+penstroke z6e--z7e;
+serifsarm(2,1,a,b,.8jut_cap,.8jut_cap,band_cap);
+serifsarm(3,4,c,d,.8jut_cap,.8jut_cap,band_cap);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+charanchorcedillas_[charepscode]=z4;
+penlabels(range 1 thru 7); 
+endchar;
+
+% AE
+newchar("00C6",880u#,ht#,0,
+ .1gap_cap#+.7jut_cap#,.5gap_cap#+.25jut_cap#);
+% E part
+x1=x2=x5=x7=x3r=.55[l,r];
+x4=.95[x1,r];
+x6=.75[x1,r];
+x8=r;
+y1=y7r=y8r=0;
+y2=y3l=y4l=h;
+y5=y6=.51h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,right,-90);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(band_cap,right,-90);
+pos7(band_cap,right,-90);
+pos8(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+penstroke z7e--z8e;
+serif(2,1,a,jut_cap,band_cap);
+serif(3,4,b,.9jut_cap,stem_cap);
+serif(7,8,c,-jut_cap,stem_cap);
+% A part 
+z10=(x2l,y3r);
+z11l=(l,0);
+posin11(1,.9stem_cap,1,x10-x11l,y10-y11l);
+z12r=(whatever,h)=whatever[z11r,z10];
+posin12(1,.9stem_cap,1,x10-x11l,y10-y11l);
+z13=(whatever,.4h)=whatever[z11,z12];
+z14=(whatever,.4h)=whatever[z3,z7];
+pos13(band_cap,z14-z13,angle(z11-z12));
+pos14(band_cap,z14-z13,-90);
+penstroke z13e--z14e;
+serifsarm(12,11,d,e,.8jut_cap,.8jut_cap,band_cap);
+charanchortops_[charepscode]=(.2[l,r],h);
+penlabels(range 1 thru 14); 
+endchar;
+
+% B
+newchar("0042",380u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.75gap_cap#+.375jut_cap#);
+x6l=x7l=l;
+x1=x5=x11=x6;
+x3r=x9r=r;
+x2=x4=x8=x10=.5[x3,x6l];
+y5=.5h;
+y4l=y5l;
+y8l=y5r;
+y1r=y2r=y7=h;
+y6=y10r=y11r=0;
+y3=.5[y4,y2];
+y9=.5[y10,y8];
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,up,0);
+pos4(.6band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(stem_cap,up,0);
+pos7(stem_cap,up,0);
+pos8(.6band_cap,left,90);
+pos9(stem_cap,up,0);
+pos10(band_cap,right,-90);
+pos11(band_cap,right,-90);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z11e--z10e & arc.e(10,9) & arc.e(9,8) & z8e--z5r;
+penstroke z6e--z7e; 
+serif(7,6,a,.8jut_cap,band_cap);
+serif(6,7,b,-.8jut_cap,band_cap);
+penlabels(range 1 thru 11);
+endchar;
+
+% C
+newchar("0043",440u#+.5stem_cap#,ht#,0,
+ .75gap_cap#+.375jut_cap#,.75gap_cap#+.3jut_cap#);
+x3r=l;
+x1=x5=r;
+x2=x4=.5[x3,r];
+y1r=y2r=h;
+y4r=y5r=0;
+y3=.5h;
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,down,180);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+serif(2,1,a,jut_cap,stem_cap);
+serif(4,5,b,-jut_cap,stem_cap);
+charanchorcedillas_[charepscode]=z4r;
+charanchortops_[charepscode]=(.5[l,r],h);
+penlabels(range 1 thru 5);
+endchar;
+
+% D
+newchar("0044",420u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.75gap_cap#+.375jut_cap#);
+x6l=x7l=l;
+x1=x5=x6;
+x3r=r;
+x2=x4=.5[x3,x6l];
+y1r=y2r=y7=h;
+y4r=y5r=y6=0;
+y3=.5[y4,y2];
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,up,0);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(stem_cap,up,0);
+pos7(stem_cap,up,0);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z6e--z7e; 
+serif(7,6,a,jut_cap,band_cap);
+serif(6,7,b,-jut_cap,band_cap);
+charanchortops_[charepscode]=(.4[l,r],h);
+charanchorbots_[charepscode]=(0,0);
+penlabels(range 1 thru 7);
+endchar;
+
+% E
+newchar("0045",400u#+.5stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.5gap_cap#+.25jut_cap#);
+x1l=x2l=l;
+x5=x7=x3r=x1;
+x4=.95[x1,r];
+x6=.75[x1,r];
+x8=r;
+y1=y7r=y8r=0;
+y2=y3l=y4l=h;
+y5=y6=.51h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,right,-90);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(band_cap,right,-90);
+pos7(band_cap,right,-90);
+pos8(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+penstroke z7e--z8e;
+serif(2,1,a,jut_cap,band_cap);
+serif(1,2,b,-jut_cap,band_cap);
+serif(3,4,c,.9jut_cap,stem_cap);
+serif(7,8,d,-jut_cap,stem_cap);
+charanchortops_[charepscode]=(.4[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+charanchorcedillas_[charepscode]=(.7[x7,x8],0);
+penlabels(range 1 thru 8); 
+endchar;
+
+% F
+newchar("0046",380u#+.5stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.4gap_cap#+.25jut_cap#);
+x1l=x2l=l;
+x3r=x5=x1;
+x4=r;
+x6=.8[x1,x4];
+y1=0;
+y2=y3l=y4l=h;
+y5=y6=.48h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,right,-90);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+serifs(2,1,a,b,jut_cap,jut_cap,band_cap);
+serif(1,2,c,-jut_cap,band_cap);
+serif(3,4,d,.9jut_cap,stem_cap);
+penlabels(range 1 thru 6); 
+endchar;
+
+% G
+newchar("0047",480u#+.5stem_cap#,ht#,0,
+ .75gap_cap#+.375jut_cap#,.75gap_cap#+.375jut_cap#);
+x3r=l;
+x1=x5=r;
+x2=x4=.5[x3,x1];
+y1r=y2r=h;
+y4r=y5r=0;
+y3=.5h;
+z6r=z5;
+z7r=z8l=(x6r,.45h);
+z9l=(.55w,y8l);
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,down,180);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(stem_cap,up,0);
+pos7(stem_cap,up,0);
+pos8(band_cap,right,-90);
+pos9(band_cap,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+penstroke z6e--z7e;
+penstroke z8e--z9e;
+serif(2,1,a,.9jut_cap,stem_cap);
+charanchortops_[charepscode]=(x2,h);
+charanchorbots_[charepscode]=(x4,0);
+penlabels(range 1 thru 9);
+endchar;
+
+% H
+newchar("0048",460u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,gap_cap#+jut_cap#);
+x1l=x2l=l;
+x3r=x4r=r;
+x5=x1;
+x6=x3;
+y1l=y3r=0;
+y2l=y4r=h;
+y5=y6=.51h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(stem_cap,up,0);
+pos4(stem_cap,up,0);
+pos5(band_cap,right,-90);
+pos6(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+serifs(2,1,a,b,jut_cap,jut_cap,band_cap);
+serifs(1,2,c,d,jut_cap,jut_cap,band_cap);
+serifs(4,3,e,f,jut_cap,jut_cap,band_cap);
+serifs(3,4,g,h,jut_cap,jut_cap,band_cap);
+charanchortops_[charepscode]=(.5[l,r],h);
+penlabels(range 1 thru 6); 
+endchar;
+
+% I
+newchar("0049",stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,gap_cap#+jut_cap#);
+x1=x2=.5w;
+y1=0;
+y2=h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+penstroke z1e--z2e;
+serifs(2,1,a,b,jut_cap,jut_cap,band_cap);
+serifs(1,2,c,d,jut_cap,jut_cap,band_cap);
+charanchortops_[charepscode]=(.5w,h);
+charanchorbots_[charepscode]=(.5w,0);
+charanchorcedillas_[charepscode]=(.5w,0);
+penlabels(range 1 thru 2);
+endchar;
+
+% J
+newchar("004A",stem_cap#,ht#,.6depth_desc#,
+ gap_cap#+jut_cap#,.9gap_cap#+.9jut_cap#);
+x1l=x2l=l;
+x4=x1-200u;
+x3=.5[x4,x1l];
+y1=.1h;
+y2=h;
+y3r=y4r=-d;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,right,-90);
+pos4(band_cap,right,-90);
+penstroke z4e--z3e & arc.e(3,1) & z1e--z2e;
+serifs(1,2,a,b,.9jut_cap,jut_cap,band_cap);
+charanchortops_[charepscode]=(x2,h);
+penlabels(range 1 thru 4);
+endchar;
+
+% K
+newchar("004B",400u#+1.8stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.15jut_cap#);
+x1l=x2l=l;
+x6r=r;
+x3r=.9[x1,x6r];
+x4l=x5l=.5[x1,x1r];
+y1=y6r=0;
+y2=y3r=h;
+y4l=y5l=.5h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+posin3(1,.9stem_cap,1,x3r-x4l,y3r-y4l);
+pos4(.9stem_cap,z3l-z4l,0);
+posin6(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+pos5(.9stem_cap,z6l-z5l,0);
+z7=whatever[z4r,z3r]=whatever[z5r,z6r];
+penstroke z1e--z2e;
+serifs(1,2,a,h,.8jut_cap,jut_cap,band_cap);
+serifs(2,1,b,c,jut_cap,.8jut_cap,band_cap);
+serifsarm(4,3,d,e,.8jut_cap,.8jut_cap,band_cap);
+serifsarm(5,6,f,g,.8jut_cap,.8jut_cap,band_cap);
+fill z7--z4r--z5r--cycle;
+charanchorbots_[charepscode]=(.5[x1,x6l],0);
+penlabels(range 1 thru 7);
+endchar;
+
+% L
+newchar("004C",400u#+.5stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.4gap_cap#+.25jut_cap#);
+x1l=x2l=l;
+x4=r;
+y1=y4r=0;
+y2=h;
+z3r=z1;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,right,-90);
+pos4(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+serif(2,1,a,jut_cap,band_cap);
+serifs(1,2,b,c,jut_cap,jut_cap,band_cap);
+serif(3,4,d,-jut_cap,stem_cap);
+charanchortops_[charepscode]=(x1,h);
+charanchortoprights_[charepscode]=(x1r+40u+jut_cap,ht_x);
+charanchorbots_[charepscode]=(.4[x1,x4],0);
+charanchorcedillas_[charepscode]=(.8[x1,x4],0);
+penlabels(range 1 thru 4); 
+endchar;
+
+% Lslash
+newchar("0141",400u#+.5stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.4gap_cap#+.25jut_cap#);
+x1l=x2l=l;
+x4=r;
+y1=y4r=0;
+y2=h;
+z3r=z1;
+z5=(x1l-jut_cap,.45h);
+z6=(x1r+jut_cap,.65h);
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,right,-90);
+pos4(band_cap,right,-90);
+pos5(.8stem_cap,z4-z3,-90);
+pos6(.8stem_cap,z4-z3,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+serif(2,1,a,jut_cap,band_cap);
+serifs(1,2,b,c,jut_cap,jut_cap,band_cap);
+serif(3,4,d,-jut_cap,stem_cap);
+charanchortops_[charepscode]=(x1,h);
+charanchortoprights_[charepscode]=(x1r+40u+jut_cap,ht_x);
+charanchorbots_[charepscode]=(.4[x1,x4],0);
+charanchorcedillas_[charepscode]=(.8[x1,x4],0);
+penlabels(range 1 thru 6); 
+endchar;
+
+% M
+newchar("004D",620u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,gap_cap#+jut_cap#);
+if monospace: stem_cap:=.9stem_cap; fi
+x1l=x2l=l;
+x3r=x4r=r;
+x5l=x1r;
+x6r=.5[x1r,x3l];
+x9r=x4l;
+y1l=y3r=0;
+y8=y10=if monospace: .4h else: 0 fi;
+y2l=y4r=y7=y11=h;
+y2l-y5l=y4r-y9r=y6r-y10=band_cap;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(stem_cap,up,0);
+pos4(stem_cap,up,0);
+posin5(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+posin7(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+posin8(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+posin9(1,.9stem_cap,1,x9r-x6r,y9r-y6r);
+posin10(1,.9stem_cap,1,x9r-x6r,y9r-y6r);
+posin11(1,.9stem_cap,1,x9r-x6r,y9r-y6r);
+z7r=whatever[z5r,z6r];
+z8r=whatever[z5r,z6r];
+z10l=whatever[z6r,z9l];
+z11l=whatever[z6r,z9l];
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+fill z2--z5l--z8l--z10r--z9r--z4--z11l--z6r--z7r--cycle;
+serifs(2,1,a,b,jut_cap,.8jut_cap,band_cap);
+serif(1,2,c,-jut_cap,band_cap);
+serif(3,4,d,jut_cap,band_cap);
+serifs(4,3,e,f,.8jut_cap,jut_cap,band_cap);
+if monospace: stem_cap:=stem_cap/.9; fi
+penlabels(range 1 thru 11); 
+endchar;
+
+% N
+newchar("004E",480u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,gap_cap#+jut_cap#);
+x1l=x2l=l;
+x3r=x4r=r;
+x5l=x1r;
+x6r=x3l;
+y1l=y3r=y8=0;
+y2l=y4r=y7=h;
+y2l-y5l=y6r=band_cap;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(stem_cap,up,0);
+pos4(stem_cap,up,0);
+posin5(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+posin6(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+posin7(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+posin8(1,.9stem_cap,1,x6r-x5l,y6r-y5l);
+z7=whatever[z5,z6];
+z8=whatever[z5,z6];
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+fill z2--z5l--z8l--z3--z6r--z7r--cycle;
+serifs(2,1,a,b,jut_cap,jut_cap,band_cap);
+serif(1,2,c,-jut_cap,band_cap);
+serifs(3,4,d,e,jut_cap,jut_cap,band_cap);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+penlabels(range 1 thru 8); 
+endchar;
+
+% Eng
+newchar("014A",440u#+stem_cap#,ht#,depth_desc#,
+ gap_cap#+jut_cap#,.75gap_cap#+.375jut_cap#);
+x1l=x2l=l;
+x5r=x6r=r;
+x4=.5[x1,x6];
+x7=.7[x1,x5];
+x8=.4[x1,x5];
+y1l=y6r=0;
+y2l=y4r=h;
+y5r=.5h;
+y7r=y8r=-d;
+z3r=z2;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,left,90);
+pos4(band_cap,left,90);
+pos5(stem_cap,up,0);
+pos6(stem_cap,up,0);
+pos7(band_cap,right,-90);
+pos8(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z8e--z7e & arc.e(7,6) & z6e--z5e & arc.e(5,4) & z4e--z3e;
+serif(1,2,a,-jut_cap,band_cap);
+serifs(2,1,b,c,jut_cap,1.1jut_cap,band_cap);
+charanchortops_[charepscode]=(x4,h);
+charanchorbots_[charepscode]=(x4,0);
+penlabels(range 1 thru 6);
+endchar;
+
+% O
+newchar("004F",500u#+stem_cap#,ht#,0,
+ .75gap_cap#+.375jut_cap#,.75gap_cap#+.375jut_cap#);
+z1r=(r,.5h);
+z2r=(.5[x1r,x3r],h);
+z3r=(l,.5h);
+z4r=(.5[x1r,x3r],0);
+pos1(stem_cap,up,0);
+pos2(band_cap,left,90);
+pos3(stem_cap,down,180);
+pos4(band_cap,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+penlabels(range 1 thru 4);
+endchar;
+
+% OE
+newchar("0152",720u#+1.5stem_cap#,ht#,0,
+ .75gap_cap#+.375jut_cap#,.5gap_cap#+.25jut_cap#);
+% E part
+x1=x2=x5=x7=.52[l,r];
+x8=r;
+x3r=x1;
+x4=.95[x1,x8];
+x6=.75[x1,x8];
+y1=y7r=y8r=0;
+y2=y3r=y4r=h;
+y5=y6=.51h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,left,90);
+pos4(band_cap,left,90);
+pos5(band_cap,right,-90);
+pos6(band_cap,right,-90);
+pos7(band_cap,right,-90);
+pos8(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z5e--z6e;
+serif(3,4,a,.9jut_cap,stem_cap);
+serif(7,8,b,-jut_cap,stem_cap);
+% O part 
+z12r=(.5[x13r,x2r],h);
+z13r=(l,.5h);
+z14r=(.5[x13r,x2r],0);
+pos12(band_cap,left,90);
+pos13(stem_cap,down,180);
+pos14(band_cap,right,-90);
+penstroke z4e--z3e--z12e & arc.e(12,13) & arc.e(13,14) & z14e--z7e--z8e;
+penlabels(range 1 thru 14); 
+endchar;
+
+% P
+newchar("0050",360u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.4gap_cap#+.25jut_cap#);
+x6l=x7l=l;
+x1=x5=x6;
+x3r=r;
+x2=x4=.5[x3l,x6r];
+y4=y5=.5h;
+y1r=y2r=y7=h;
+y6l=0;
+y3r=.5[y4,y2];
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,up,0);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(stem_cap,up,0);
+pos7(stem_cap,up,0);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z6e--z7e; 
+serifs(7,6,a,b,jut_cap,1.1jut_cap,band_cap);
+serif(6,7,c,-jut_cap,band_cap);
+penlabels(range 1 thru 7);
+endchar;
+
+% Thorn
+newchar("00DE",360u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.4gap_cap#+.25jut_cap#);
+x6l=x7l=l;
+x1=x5=x6;
+x3r=r;
+x2=x4=.5[x3l,x6r];
+y4=y5=.25h;
+y1r=y2r=.75h;
+y7=h;
+y6l=0;
+y3r=.5[y4,y2];
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,up,0);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(stem_cap,up,0);
+pos7(stem_cap,up,0);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z6e--z7e; 
+serifs(7,6,a,b,jut_cap,1.1jut_cap,band_cap);
+serifs(6,7,c,d,1.1jut_cap,jut_cap,band_cap);
+penlabels(range 1 thru 7);
+endchar;
+
+% Q
+newchar("0051",500u#+stem_cap#,ht#,.9depth_desc#,
+ .75gap_cap#+.375jut_cap#,.75gap_cap#+.375jut_cap#);
+z1r=(r,.5h);
+z2r=(.5[l,r],h);
+z3r=(l,.5h);
+z4r=(.5[l,r],0);
+z5=z4;
+z6=(x4,.5[y7l,y4r]);
+z7r=(.4[x4,x1],-d);
+z8r=(.6[x4,x1],-d);
+pos1(stem_cap,up,0);
+pos2(band_cap,left,90);
+pos3(stem_cap,down,180);
+pos4(band_cap,right,-90);
+pos5(stem_cap,down,180);
+pos6(stem_cap,down,180);
+pos7(band_cap,right,-90);
+pos8(band_cap,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+penstroke z5e--z6e & arc.e(6,7) & z7e--z8e; 
+penlabels(range 1 thru 8);
+endchar;
+
+% R
+newchar("0052",400u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.5gap_cap#+jut_cap#);
+x6l=x7l=l;
+x1=x5=x6;
+x9r=r;
+x3r=if monospace: r else: .9[l,r] fi;
+x2=x4=.5[x3,x6l];
+x8r=.5[x4,x3l];
+y4=y5=.5h;
+y1r=y2r=y7l=h;
+y6l=y9r=0;
+y3r=.5[y4,y2];
+y8r=y4l;
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,up,0);
+pos4(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(stem_cap,up,0);
+pos7(stem_cap,up,0);
+pos8(.9stem_cap,z8r-z9r,0);
+pos9(.9stem_cap,z8r-z9r,0);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z6e--z7e; 
+serifs(7,6,a,b,jut_cap,jut_cap,band_cap);
+serif(6,7,c,-jut_cap,band_cap);
+serifarm(8,9,d,-jut_cap,band_cap);
+charanchortops_[charepscode]=(.4w,h);
+charanchorbots_[charepscode]=(.5w,0);
+penlabels(range 1 thru 9);
+endchar;
+
+% S
+newchar("0053",380u#+stem_cap#,ht#,0,
+ .75gap_cap#+.375jut_cap#,.75gap_cap#+.375jut_cap#);
+x3r=x8=l;
+x6r=r;
+x2=x4=x5=x7=.5[l,r];
+x1=.95[x3,x6r];
+y1r=y2r=h;
+y8r=y7r=0;
+y4=y5=.5h;
+y3=.5[y4,y2];
+y6=.5[y7,y5];
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,down,180);
+pos4(band_cap,right,-90);
+pos5(band_cap,left,90);
+pos6(stem_cap,up,0);
+pos7(band_cap,right,-90);
+pos8(band_cap,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4);
+penstroke z8e--z7e & arc.e(7,6) & arc.e(6,5);
+serif(2,1,a,.8jut_cap,stem_cap);
+serif(7,8,b,.8jut_cap,stem_cap);
+charanchortops_[charepscode]=(x7,h);
+charanchorbots_[charepscode]=(x7,0);
+charanchorcedillas_[charepscode]=(x7,0);
+penlabels(range 1 thru 8);
+endchar;
+
+% capital sharp S
+newchar("1E9E",380u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,.8gap_cap#+.4jut_cap#);
+x6r=x7r=l;
+x2=x3r=x4r=x9r=r;
+x1=x10=.5[x3,x6l];
+x8=x5=.6[x3,x6l];
+x11=.5[x10,x6l+.6jut_cap];
+y5=y7=.55h;
+y8l=y5l-band_cap;
+y1r=y2r=y3=h;
+y6=y10r=y11r=0;
+y4=.5[y5,y2];
+y9=.5[y10,y8];
+pos1(band_cap,left,90);
+pos2(band_cap,left,90);
+pos3(stem_cap,up,0);
+pos4(stem_cap,up,0);
+pos5(.6band_cap,right,-90);
+pos6(stem_cap,down,180);
+pos7(stem_cap,down,180);
+pos8(.6band_cap,left,90);
+pos9(stem_cap,up,0);
+pos10(band_cap,right,-90);
+pos11(band_cap,right,-90);
+penstroke z2e--z1e & arc.e(1,7) & z7e--z6e;
+penstroke arc.e(5,4) & z4e--z3e;
+penstroke z11e--z10e & arc.e(10,9) & arc.e(9,8) & z8e--z5r;
+serifs(7,6,a,b,.8jut_cap,.6jut_cap,band_cap);
+penlabels(range 1 thru 11);
+endchar;
+
+% T
+newchar("0054",580u#,ht#,0,
+ .2gap_cap#+.25jut_cap#,.2gap_cap#+.25jut_cap#);
+x1=x2=.5[l,r];
+x3=l;
+x4=r;
+y1=0;
+y2=h;
+y3l=y4l=h;
+pos1(stem_cap,up,0);
+pos2(stem_cap,up,0);
+pos3(band_cap,right,-90);
+pos4(band_cap,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+serifs(2,1,a,b,jut_cap,jut_cap,band_cap);
+serif(4,3,c,-jut_cap,stem_cap);
+serif(3,4,d,jut_cap,stem_cap);
+charanchortops_[charepscode]=(x2,h);
+charanchorbots_[charepscode]=(x1,0);
+charanchorcedillas_[charepscode]=(x1,0);
+penlabels(range 1 thru 4);
+endchar;
+
+% U
+newchar("0055",460u#+stem_cap#,ht#,0,
+ gap_cap#+jut_cap#,gap_cap#+jut_cap#);
+x1r=x2r=l;
+x3r=x4r=r;
+x5r=.5[x1r,x3r];
+y1r=y3r=.35h;
+y2r=y4r=h;
+y5r=0;
+pos1(stem_cap,down,180);
+pos2(stem_cap,down,180);
+pos3(stem_cap,up,0);
+pos4(stem_cap,up,0);
+pos5(band_cap,right,-90);
+penstroke z2e--z1e & arc.e(1,5) & arc.e(5,3) & z3e--z4e;
+serifs(1,2,c,d,jut_cap,jut_cap,band_cap);
+serifs(3,4,g,h,jut_cap,jut_cap,band_cap);
+charanchortops_[charepscode]=(x5,h);
+charanchorbots_[charepscode]=(x5,0);
+charanchorcedillas_[charepscode]=(x5,0);
+penlabels(range 1 thru 6); 
+endchar;
+
+% V
+newchar("0056",520u#+stem_cap#,ht#,0,
+ .1gap_cap#+.7jut_cap#,.1gap_cap#+.7jut_cap#);
+z1l=(l,h); 
+z4r=(r,h); 
+z5=(.5[x1l,x4r],band_cap);
+y2r=y3l=0; 
+posin1(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin4(1,.9stem_cap,1,x5-x4r,y5-y4r);
+z2r=whatever[z1r,z5];
+z3l=whatever[z4l,z5];
+posin2(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin3(1,.9stem_cap,1,x5-x4r,y5-y4r);
+serifsarm(2,1,a,b,.8jut_cap,.8jut_cap,band_cap);
+serifsarm(3,4,c,d,.8jut_cap,.8jut_cap,band_cap);
+penlabels(range 1 thru 5); 
+endchar;
+
+% W
+newchar("0057",780u#+1.2stem_cap#,ht#,0,
+ .1gap_cap#+.7jut_cap#,.1gap_cap#+.7jut_cap#);
+if monospace: stem_cap:=.9stem_cap; fi
+z1l=(l,h); 
+z4r=(.5[l,r]+.2stem_cap,if monospace: .6h else: h fi); 
+z5=(.5[x1l,x4r],band_cap);
+y2r=y3l=0; 
+posin1(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin4(1,.9stem_cap,1,x5-x4r,y5-y4r);
+z2r=whatever[z1r,z5];
+z3l=whatever[z4l,z5];
+posin2(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin3(1,.9stem_cap,1,x5-x4r,y5-y4r);
+z6l=(r-x4r+l,y4r);
+z6r=(r-x4l+l,y4l);
+z7l=(r-x3r+l,y3r);
+z7r=(r-x3l+l,y3l);
+z8l=(r-x2r+l,y2r);
+z8r=(r-x2l+l,y2l);
+z9l=(r-x1r+l,y1r);
+z9r=(r-x1l+l,y1l);
+z8=.5[z8l,z8r];
+z9=.5[z9l,z9r];
+penstroke z3e--z4e;
+penstroke z6e--z7e;
+serifsarm(2,1,a,b,.8jut_cap,.8jut_cap,band_cap);
+serifsarm(8,9,c,d,.8jut_cap,.8jut_cap,band_cap);
+charanchortops_[charepscode]=(.5[x1,x9],h);
+charanchorbots_[charepscode]=(.5[x1,x9],0);
+if monospace: stem_cap:=stem_cap/.9; fi
+penlabels(range 1 thru 9); 
+endchar;
+
+% X
+newchar("0058",420u#+2stem_cap#,ht#,0,
+ .1gap_cap#+.7jut_cap#,.1gap_cap#+.7jut_cap#);
+x1l=x3l=l;
+x2r=x4r=r;
+y1l=y4r=0;
+y2r=y3l=h;
+posin1(1,.9stem_cap,1,x2r-x1l,y2r-x1l);
+posin2(1,.9stem_cap,1,x2r-x1l,y2r-x1l);
+posin3(1,.9stem_cap,1,x4r-x3l,y4r-y3l);
+posin4(1,.9stem_cap,1,x4r-x3l,y4r-y3l);
+serifsarms(2,1,a,b,c,d,.8jut_cap,.8jut_cap,band_cap);
+serifsarms(3,4,e,f,g,h,.8jut_cap,.8jut_cap,band_cap);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+penlabels(range 1 thru 4); 
+endchar;
+
+% Y
+newchar("0059",520u#+stem_cap#,ht#,0,
+ .4gap_cap#+.25jut_cap#,.4gap_cap#+.25jut_cap#);
+% like V
+z1l=(l,h); 
+z4r=(r,h); 
+z5=(.5[x1l,x4r],.45h+band_cap);
+y2r=y3l=.45h; 
+posin1(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin4(1,.9stem_cap,1,x5-x4r,y5-y4r);
+z2r=whatever[z1r,z5];
+z3l=whatever[z4l,z5];
+posin2(1,.9stem_cap,1,x5-x1l,y5-y1l);
+posin3(1,.9stem_cap,1,x5-x4r,y5-y4r);
+% additions
+z7=(.5w,0);
+pos7(stem_cap,up,0);
+z6l=whatever[z1l,z2l]=z7l+whatever*up;
+z6r=whatever[z3r,z4r]=z7r+whatever*up;
+z6=.5[z6l,z6r];
+fill z6r--z3r--z2l--z6l--cycle;
+serifsarm(2,1,a,b,.7jut_cap,.7jut_cap,band);
+serifsarm(3,4,c,d,.7jut_cap,.7jut_cap,band);
+serifsarm(6,7,e,f,jut_cap,jut_cap,band);
+charanchortops_[charepscode]=(.5w,h);
+charanchorbots_[charepscode]=(.5w,0);
+penlabels(range 1 thru 7); 
+endchar;
+
+% Z
+newchar("005A",550u#,ht#,0,
+ .7gap_cap#+.25jut_cap#,.7gap_cap#+.25jut_cap#);
+x4l=x5=l;
+x6=r;
+x1=.05[l,r];
+x2=x3r=.95[l,r];
+y1l=y2l=h;
+y3r=y2r;
+y4l=y5l;
+y5r=y6r=0;
+pos1(band_cap,right,-90);
+pos2(band_cap,right,-90);
+pos5(band_cap,right,-90);
+pos6(band_cap,right,-90);
+posin3(1,.9stem_cap,1,x3r-x4l,y3r-y4l);
+posin4(1,.9stem_cap,1,x3r-x4l,y3r-y4l);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+serif(2,1,a,-jut_cap,stem_cap);
+serif(5,6,b,-1.1jut_cap,stem_cap);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+penlabels(range 1 thru 6); 
+endchar;
+
+% a
+newchar("0061",290u#+stem#,ht_x#,0,
+ .7gap#+.35jut#,.8gap#+jut#);
+x6r=x7r=r;
+x1=x5=x7;
+x3r=l;
+x2=x4=.5[x3,x6l];
+x8=.5[x3,x6l];
+x9=.5[x3r,x3];
+y4r=y5r=y6=0;
+y1=y2=.52h;
+y7=.65h;
+y3=.5[y4,y2];
+y8r=y9r=h;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+pos8(band,left,90);
+pos9(band,left,90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+penstroke z6e--z7e & arc.e(7,8) & z8e--z9e; 
+serif(7,6,a,-jut,band);
+serif(8,9,b,-.8jut,stem);
+charanchortops_[charepscode]=(.5[x3,x7],h);
+charanchorbots_[charepscode]=(.6[x3,x7],0);
+charanchorcedillas_[charepscode]=z6;
+penlabels(range 1 thru 9);
+endchar;
+
+% ae
+newchar("00E6",600u#,ht_x#,0, 
+ .7gap#+.35jut#,.75gap#+.35jut#);
+% a part
+x1=x5=x6=x7=.5[l,r];
+x3r=l;
+x2=x4=.5[x3,x6l];
+x8=.5[x3,x6l];
+x9=.5[x3r,x3];
+y4r=y5r=0;
+y1=y2=y6=.52h;
+y7=.65h;
+y3r=.5[y4,y2];
+y8r=y9r=h;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+pos8(band,left,90);
+pos9(band,left,90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & arc.e(4,6) & z6e--z7e
+ & arc.e(7,8) & z8e--z9e;
+serif(8,9,b,-jut,stem);
+% e part
+x11=x15=.5[l,r];
+x13r=r;
+x12=x13;
+x14=x16=.75[l,r];
+x17=.5[x13,x13r];
+y11=y12=.52h;
+y14r=h;
+y15=y13r=y11r;
+y16r=y17r=0;
+pos11(band,right,-90);
+pos12(band,right,-90);
+pos13(stem,up,0);
+pos14(band,left,90);
+pos15(stem,down,180);
+pos16(band,right,-90);
+pos17(band,right,-90);
+penstroke arc.e(13,14) & arc.e(14,15) & arc.e(15,16) & z16e--z17e;
+penstroke z11e--z12e;
+charanchortops_[charepscode]=(.5w,h);
+penlabels(range 1 thru 17);
+endchar;
+
+% b
+newchar("0062",330u#+stem#,ht_asc#,0,
+ gap#+jut#,.75gap#+.35jut#);
+x6l=x7l=l;
+x1=x5=x6;
+x3r=r;
+x2=x4=.5[x3l,x6r];
+y4r=y5r=y6r=0;
+y1r=y2r=ht_x;
+y7r=h;
+y3r=.5[y4,y2];
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,up,0);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z6e--z7e; 
+serif(7,6,a,jut,band);
+serif(6,7,b,-jut,band);
+penlabels(range 1 thru 7);
+endchar;
+
+% c
+newchar("0063",330u#+.5stem#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x3r=l;
+x1=x5=r;
+x2=x4=.5[x3,x1];
+y1r=y2r=h;
+y4r=y5r=0;
+y3r=.5h;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+serif(2,1,a,jut,stem);
+charanchorcedillas_[charepscode]=z4r;
+charanchortops_[charepscode]=(x2,h);
+penlabels(range 1 thru 5);
+endchar;
+
+% d
+newchar("0064",330u#+stem#,ht_asc#,0,
+ .75gap#+.35jut#,gap#+jut#);
+x6r=x7r=r;
+x1=x5=x6;
+x3r=l;
+x2=x4=.5[x3l,x6l];
+y4r=y5r=y6r=0;
+y1r=y2r=ht_x;
+y7r=h;
+y3r=.5[y4,y2];
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+penstroke z6e--z7e; 
+serif(7,6,a,-jut,band);
+serif(6,7,b,-jut,band);
+charanchortoprights_[charepscode]=(x6r+40u,ht_x);
+charanchorbots_[charepscode]=(x5r,0);
+penlabels(range 1 thru 7);
+endchar;
+
+% eth
+newchar("00F0",330u#+stem#,ht_asc#,0,
+ .75gap#+.35jut#,gap#+jut#);
+x6r=x7r=r;
+x1=x5=x6;
+x3r=l;
+x2=x4r=.5[x3l,x6l];
+y4r=y5r=y6=0;
+y1r=y2r=y7=ht_x;
+y3r=.5[y4r,y2];
+z8r=z7r;
+z9r=(.5[l,r],h);
+z10=.5[z8l,z9l]-(.25(x1-x3),0);
+z11=.5[z8r,z9r]+(.25(x1-x3),0);
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+pos8(.9stem,z9r-z8r,0);
+pos9(.9stem,z9r-z8r,0);
+pos10(.8band,left,angle(z9r-z8r));
+pos11(.8band,left,angle(z9r-z8r));
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+penstroke z6e--z7e--z8e--z9e; 
+penstroke z10e--z11e;
+serif(7,6,a,-jut,band);
+charanchortoprights_[charepscode]=(x6r+40u,ht_x);
+charanchorbots_[charepscode]=(w,0);
+penlabels(range 1 thru 11);
+endchar;
+
+% e
+newchar("0065",320u#+stem#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x5r=l;
+x3r=r;
+x1=x5;
+x2=x3;
+x4=x6=.5[l,r];
+x7=.5[x3,x3r];
+y1=y2=.52h;
+y4r=h;
+y5r=y3=y1r;
+y6r=y7r=0;
+pos1(band,right,-90);
+pos2(band,right,-90);
+pos3(stem,up,0);
+pos4(band,left,90);
+pos5(stem,down,180);
+pos6(band,right,-90);
+pos7(band,right,-90);
+penstroke z1e--z2e;
+penstroke arc.e(3,4) & arc.e(4,5) & arc.e(5,6) & z6e--z7e;
+charanchortops_[charepscode]=(.5[x1,x2],h);
+charanchorbots_[charepscode]=(.6[x1,x2],0);
+charanchorcedillas_[charepscode]=(.7[x6,x7],0);
+penlabels(range 1 thru 7);
+endchar;
+
+% f
+newchar("0066",130u#+stem#,ht_asc#,0,
+ gap#+jut#,if monospace: .5gap# else: 0 fi);
+if monospace:
+ x4r=r;
+ x3=.8[x1,x4];
+else:
+ x3=r;
+ x4r=1.2[x1,x3];
+fi 
+x1r=x2r=l;
+x2r-x5l=.5(x3-x1);
+x6l-x2l=.6(x3-x1);
+y1=0;
+y2=.7h;
+y5l=y6l=ht_x;
+y3r=y4r=h;
+pos1(stem,down,180);
+pos2(stem,down,180);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+penstroke z4e--z3e & arc.e(3,2) & z2e--z1e;
+penstroke z5e--z6e;
+serifs(2,1,a,b,.9jut,1.1jut,band);
+penlabels(range 1 thru 6);
+endchar;
+
+if not monospace:
+
+% f with long mid bar
+newchar("E020",130u#+stem#,ht_asc#,0,
+ gap#+jut#,0);
+x3=r;
+x4r=1.2[x1,x3];
+x1r=x2r=l;
+x2r-x5l=.5(x3-x1);
+x6l=x3+gap+.5stem;
+y1=0;
+y2=.7h;
+y5l=y6l=ht_x;
+y3r=y4r=h;
+pos1(stem,down,180);
+pos2(stem,down,180);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+penstroke z4e--z3e & arc.e(3,2) & z2e--z1e;
+penstroke z5e--z6e;
+serifs(2,1,a,b,.9jut,1.1jut,band);
+penlabels(range 1 thru 6);
+adjustwidth(x1r,x3,gap,.1gap);
+endchar;
+
+% f with long top bar
+newchar("E021",130u#+stem#,ht_asc#,0,
+ gap#+jut#,0);
+x3=r;
+x4=x3+gap+.5stem;
+x1r=x2r=l;
+x2r-x5l=.5(x3-x1);
+x6l-x2l=.6(x3-x1);
+y1=0;
+y2=.7h;
+y5l=y6l=ht_x;
+y3r=y4r=h;
+pos1(stem,down,180);
+pos2(stem,down,180);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+penstroke z4e--z3e & arc.e(3,2) & z2e--z1e;
+penstroke z5e--z6e;
+serifs(2,1,a,b,.9jut,1.1jut,band);
+penlabels(range 1 thru 6);
+adjustwidth(x1r,x3,gap,.1gap);
+endchar;
+
+fi
+
+% g
+newchar("0067",310u#+stem#,ht_x#,depth_desc#,
+ .75gap#+.35jut#,gap#+jut#);
+x6r=x7r=r;
+x1=x5=x6;
+x3r=l;
+x2=x4=x8=.5[l,r];
+x9=.5[x3r,x3];
+y1r=y2r=y6=h;
+y3=.5[y2,y4];
+y4r=y5r=y7=0;
+y9r=y8r=-d;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+pos8(band,right,-90);
+pos9(band,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+penstroke z9e--z8e & arc.e(8,7) & z7e--z6e;
+serif(7,6,a,jut,band);
+charanchortops_[charepscode]=(.5[l,r],h);
+penlabels(range 1 thru 9);
+endchar;
+
+% h
+newchar("0068",310u#+stem#,ht_asc#,0,
+ gap#+jut#,.8gap#+jut#);
+x1l=x2l=l;
+x3=x2;
+x5r=x6r=r;
+x4=.5[x1,x6];
+y1=y6=0;
+y2=h;
+y3r=y4r=ht_x;
+y5=.5ht_x;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(stem,up,0);
+pos6(stem,up,0);
+penstroke z1e--z2e;
+penstroke z6e--z5e & arc.e(5,4) & z4e--z3e;
+serif(1,2,a,-jut,band);
+serifs(2,1,b,c,jut,1.1jut,band);
+serifs(5,6,d,e,1.1jut,jut,band);
+charanchortops_[charepscode]=(.6[x1,x6],ht_x);
+penlabels(range 1 thru 6);
+endchar;
+
+% dotlessi
+newchar("0131",stem#,ht_x#,0,
+ gap#+if monospace: 1.15 fi jut#,gap#+if monospace: .85 fi jut#);
+z1l=(l,0);
+z2l=(l,h);
+pos1(stem,up,0);
+pos2(stem,up,0);
+penstroke z1e--z2e;
+serifs(2,1,a,b,jut,jut,band);
+serif(1,2,c,-jut,band);
+charanchortops_[charepscode]=z2;
+charanchorbots_[charepscode]=z1;
+charanchorcedillas_[charepscode]=z1;
+penlabels(range 1 thru 2);
+endchar;
+ 
+% dotlessj
+newchar("0237",stem#,ht_x#,depth_desc#,
+ gap#+jut#,gap#+jut#);
+x1l=x2l=l;
+x4=x1l-120u;
+x3=.5[x4,x1l];
+y1l=-.4d;
+y2l=h;
+y3r=y4r=-d;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(band,right,-90);
+pos4(band,right,-90);
+penstroke z4e--z3e & arc.e(3,1) & z1e--z2e;
+serif(1,2,a,-jut,band);
+charanchortops_[charepscode]=z2;
+penlabels(range 1 thru 4);
+endchar;
+
+% k
+newchar("006B",300u#+1.8stem#,ht_asc#,0,
+ gap#+jut#,.15jut#);
+x1l=x2l=l;
+x6r=r;
+x3r=.95[x1,x6r];
+x4l=x5l=.5[x1,x1r];
+y1=y6r=0;
+y2=h;
+y3r=ht_x;
+y4l=y5l=.55ht_x;
+pos1(stem,up,0);
+pos2(stem,up,0);
+posin3(1,.9stem,1,x3r-x4l,y3r-y4l);
+pos4(.9stem,z3l-z4l,0);
+posin6(1,.9stem,1,x6r-x5l,y6r-y5l);
+pos5(.9stem,z6l-z5l,0);
+z7=whatever[z4r,z3r]=whatever[z5r,z6r];
+penstroke z1e--z2e;
+serif(1,2,a,-jut,band);
+serifs(2,1,b,c,jut,.8jut,band);
+serifsarm(4,3,d,e,.8jut,.8jut,band);
+serifsarm(5,6,f,g,.8jut,.8jut,band);
+fill z7--z4r--z5r--cycle;
+charanchorbots_[charepscode]=(.5[x1,x6l],0);
+penlabels(range 1 thru 7);
+endchar;
+
+% kgreenlandic
+newchar("0138",300u#+1.8stem#,ht_x#,0,
+ gap#+jut#,.15jut#);
+x1l=x2l=l;
+x6r=r;
+x3r=.95[x1,x6r];
+x4l=x5l=.5[x1,x1r];
+y1=y6r=0;
+y2=y3r=h;
+y4l=y5l=.55h;
+pos1(stem,up,0);
+pos2(stem,up,0);
+posin3(1,.9stem,1,x3r-x4l,y3r-y4l);
+pos4(.9stem,z3l-z4l,0);
+posin6(1,.9stem,1,x6r-x5l,y6r-y5l);
+pos5(.9stem,z6l-z5l,0);
+z7=whatever[z4r,z3r]=whatever[z5r,z6r];
+penstroke z1e--z2e;
+serif(1,2,a,-jut,band);
+serifs(2,1,b,c,jut,.8jut,band);
+serifsarm(4,3,d,e,.8jut,.8jut,band);
+serifsarm(5,6,f,g,.8jut,.8jut,band);
+fill z7--z4r--z5r--cycle;
+charanchorbots_[charepscode]=(.5[x1,x6l],0);
+penlabels(range 1 thru 7);
+endchar;
+
+% l
+newchar("006C",stem#,ht_asc#,0,
+ gap#+jut#,gap#+jut#);
+z1l=(l,0);
+z2l=(l,h);
+pos1(stem,up,0);
+pos2(stem,up,0);
+penstroke z1e--z2e; 
+serifs(2,1,a,b,jut,jut,band);
+serif(1,2,c,-jut,band);
+charanchortops_[charepscode]=z2;
+charanchorbots_[charepscode]=z1;
+charanchortoprights_[charepscode]=(x1r+40u,ht_x);
+penlabels(range 1 thru 2);
+endchar;
+
+% lslash
+newchar("0142",stem#,ht_asc#,0,
+ gap#+jut#,gap#+jut#);
+z1l=(l,0);
+z2l=(l,h);
+z3=(x1l-jut,.45h);
+z4=(x1r+jut,.65h);
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(.8stem,z4-z3,-90);
+pos4(.8stem,z4-z3,-90);
+penstroke z1e--z2e; 
+penstroke z3e--z4e; 
+serifs(2,1,a,b,jut,jut,band);
+serif(1,2,c,-jut,band);
+charanchortops_[charepscode]=z2;
+charanchorbots_[charepscode]=z1;
+charanchortoprights_[charepscode]=(x1r+40u,ht_x);
+penlabels(range 1 thru 4);
+endchar;
+
+% m
+newchar("006D",490u#+2stem#,ht_x#,0,
+ gap#+jut#,.8gap#+jut#);
+x1l=x2l=l;
+x5=x2;
+x7r=x8r=r;
+x3=x4=.5[x1,x8];
+x6=.5[x4,x8];
+y1l=y3=y8r=0;
+y2l=y5r=y4=y6r=h;
+y7r=.5h;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(stem,up,0);
+pos4(stem,up,0);
+pos5(band,left,90);
+pos6(band,left,90);
+pos7(stem,up,0);
+pos8(stem,up,0);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z8e--z7e & arc.e(7,6) & z6e--z5e;
+serif(1,2,a,-jut,band);
+serifs(2,1,b,c,jut,jut,band);
+serifs(4,3,d,e,.9jut,.9jut,band);
+serifs(7,8,f,g,jut,jut,band);
+penlabels(range 1 thru 8);
+endchar;
+
+% n
+newchar("006E",310u#+stem#,ht_x#,0,
+ gap#+jut#,.8gap#+jut#);
+x1l=x2l=l;
+x3=x2;
+x5r=x6r=r;
+x4=.5[x1,x6];
+y1=y6=0;
+y2=y3r=y4r=h;
+y5=.5h;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(stem,up,0);
+pos6(stem,up,0);
+penstroke z1e--z2e;
+penstroke z6e--z5e & arc.e(5,4) & z4e--z3e;
+serif(1,2,a,-jut,band);
+serifs(2,1,b,c,jut,1.1jut,band);
+serifs(5,6,d,e,1.1jut,jut,band);
+charanchortops_[charepscode]=(.6[x1,x6],ht_x);
+charanchorbots_[charepscode]=(.5[x1,x6],0);
+penlabels(range 1 thru 6);
+endchar;
+
+% eng
+newchar("014B",310u#+stem#,ht_x#,depth_desc#,
+ gap#+jut#,.75gap#+.35jut#);
+x1l=x2l=l;
+x3=x2;
+x5r=x6r=r;
+x4=.5[x1,x6];
+x7=.7[x1,x6];
+x8=.4[x1,x6];
+y1l=y6r=0;
+y2l=y3r=y4r=h;
+y5r=.5h;
+y7r=y8r=-d;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(stem,up,0);
+pos6(stem,up,0);
+pos7(band,right,-90);
+pos8(band,right,-90);
+penstroke z1e--z2e;
+penstroke z8e--z7e & arc.e(7,6) & z6e--z5e & arc.e(5,4) & z4e--z3e;
+serif(1,2,a,-jut,band);
+serifs(2,1,b,c,jut,1.1jut,band);
+charanchortops_[charepscode]=(x4,h);
+charanchorbots_[charepscode]=(x4,0);
+penlabels(range 1 thru 8);
+endchar;
+
+% o
+newchar("006F",330u#+stem#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+z1r=(r,.5h);
+z2r=(.5w,h);
+z3r=(l,.5h);
+z4r=(.5w,0);
+pos1(stem,up,0);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+charanchortops_[charepscode]=(x2r,h);
+charanchorbots_[charepscode]=(x4r,0);
+penlabels(range 1 thru 4);
+endchar;
+
+% oe
+newchar("0153",600u#+stem#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+% o part
+z1=(.5[l,r],.5h);
+z2r=(.5[x1,x3],h);
+z3r=(l,.5h);
+z4r=(.5[x1,x3],0);
+pos1(stem,up,0);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+% e part
+x11=x15=.5[l,r];
+x13r=r;
+x12=x13;
+x14=x16=.5[x11,x12];
+x17=.5[x13,x13r];
+y11=y12=.52h;
+y14r=h;
+y15=y13=y11r;
+y16r=y17r=0;
+pos11(band,right,-90);
+pos12(band,right,-90);
+pos13(stem,up,0);
+pos14(band,left,90);
+pos15(stem,down,180);
+pos16(band,right,-90);
+pos17(band,right,-90);
+penstroke arc.e(13,14) & arc.e(14,15) & arc.e(15,16) & z16e--z17e;
+penstroke z11e--z12e;
+charanchortops_[charepscode]=(.5[l,r],h);
+penlabels(range 1 thru 17);
+endchar;
+
+% p
+newchar("0070",330u#+stem#,ht_x#,depth_desc#,
+ gap#+jut#,.75gap#+.35jut#);
+x6l=x7l=l;
+x1=x5=x6;
+x3r=r;
+x2=x4=.5[x3,x6l];
+y4r=y5r=0;
+y1r=y2r=y7l=h;
+y6l=-d;
+y3r=.5[y4,y2];
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,up,0);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z6e--z7e; 
+serifs(7,6,a,b,jut,jut,band);
+serif(6,7,c,-jut,band);
+penlabels(range 1 thru 7);
+endchar;
+
+% thorn
+newchar("00FE",330u#+stem#,ht#,depth_desc#,
+ gap#+jut#,.75gap#+.35jut#);
+x6l=x7l=l;
+x1=x5=x6;
+x3r=r;
+x2=x4=.5[x3,x6l];
+y4r=y5r=0;
+y7l=h;
+y1r=y2r=ht_x;
+y6l=-d;
+y3r=.5[y4,y2];
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,up,0);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+penstroke z5e--z4e & arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z6e--z7e; 
+serifs(7,6,a,b,jut,jut,band);
+serif(6,7,c,-jut,band);
+penlabels(range 1 thru 7);
+endchar;
+
+% q
+newchar("0071",310u#+stem#,ht_x#,depth_desc#,
+ .75gap#+.35jut#,gap#+jut#);
+x6r=x7r=r;
+x1=x5=x6;
+x3r=l;
+x2=x4=.5[x3,x6l];
+y4r=y5r=0;
+y1r=y2r=h;
+y6r=-d;
+y7r=h;
+y3r=.5[y4,y2];
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+penstroke z6e--z7e; 
+serifs(7,6,a,b,jut,jut,band);
+serif(6,7,c,jut,band);
+penlabels(range 1 thru 7);
+endchar;
+
+% r
+newchar("0072",240u#+stem#,ht_x#,0,
+ gap#+jut#,.5gap#);
+x1l=x2l=l;
+x3=x2;
+x5r=r;
+x4r=.5[x1,x5];
+y1l=0;
+y2l=y3r=y4r=h;
+y5r=.6h;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(stem,up,0);
+penstroke z1e--z2e;
+penstroke z5e & arc.e(5,4) & z4e--z3e;
+serif(1,2,a,-jut,band);
+serifs(2,1,b,c,jut,1.1jut,band);
+charanchortops_[charepscode]=(.2[x3,x5],h);
+charanchorbots_[charepscode]=(.2[x3,x5],0);
+penlabels(range 1 thru 5);
+endchar;
+
+% s
+newchar("0073",290u#+stem#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x3r=l;
+x6r=r;
+x2=x4=x5=x7=.5[l,r];
+x1=.95[l,r];
+x8=x3r;
+y1r=y2r=h;
+y8r=y7r=0;
+y4=y5=.5h;
+y3=.5[y4,y2];
+y6=.5[y7,y5];
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,left,90);
+pos6(stem,up,0);
+pos7(band,right,-90);
+pos8(band,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4);
+penstroke z8e--z7e & arc.e(7,6) & arc.e(6,5);
+serif(2,1,a,.8jut,stem);
+serif(7,8,b,.8jut,stem);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+charanchorcedillas_[charepscode]=(.5[l,r],0);
+penlabels(range 1 thru 8);
+endchar;
+
+% germandbls
+newchar("00DF",340u#+stem#,ht#,0,
+ .8gap#+jut#,.8gap#+.4jut#);
+x6r=x7r=l;
+x3r=x4r=x9r=r;
+x1=x10=.5[x3,x6l];
+x8=x5=.6[x3,x6l];
+x11=.5[x10,x6l+.6jut];
+y5=y7=.55h;
+y8l=y5l-band;
+y1r=y3=h;
+y6=y10r=y11r=0;
+y4=.5[y5,y2];
+y9=.5[y10,y8];
+z2r=z3r;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,up,0);
+pos4(stem,up,0);
+pos5(.6band,right,-90);
+pos6(stem,down,180);
+pos7(stem,down,180);
+pos8(.6band,left,90);
+pos9(stem,up,0);
+pos10(band,right,-90);
+pos11(band,right,-90);
+penstroke arc.e(5,4) & arc.e(4,1) & arc.e(1,7) & z7e--z6e;
+penstroke z11e--z10e & arc.e(10,9) & arc.e(9,8) & z8e--z5r;
+serifs(7,6,a,b,.8jut,.6jut,band);
+penlabels(range 1 thru 11);
+endchar;
+
+% t
+newchar("0074",180u#+.5stem#,.65[ht_x#,ht#],0,
+ .75gap#+jut#,.5gap#);
+x1r=x2r=l;
+x4=r;
+x3=.7[x2,x4];
+x1r-x5=.3(x4-x2);
+x6-x1l=.7(x4-x2);
+y1=h;
+y2=.4ht_x;
+y3r=y4r=0;
+y5l=y6l=ht_x;
+pos1(stem,down,180);
+pos2(stem,down,180);
+pos3(band,right,-90);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & z3e--z4e; 
+penstroke z5e--z6e;
+charanchortops_[charepscode]=(0,h);
+charanchorbots_[charepscode]=(.5[x2,x4],0);
+penlabels(range 1 thru 6);
+endchar;
+
+% u
+newchar("0075",300u#+stem#,ht_x#,0,
+ .75gap#+jut#,gap#+jut#);
+x1r=x2r=l;
+x5r=x6r=r;
+x3=.5[x1,x4];
+y1r=y6r=h;
+y3r=y5r=0;
+y2r=.5h;
+z4r=z5;
+pos1(stem,down,180);
+pos2(stem,down,180);
+pos3(band,right,-90);
+pos4(band,right,-90);
+pos5(stem,up,0);
+pos6(stem,up,0);
+penstroke z5e--z6e;
+penstroke z1e--z2e & arc.e(2,3) & z3e--z4e;
+serif(2,1,a,-jut,band);
+serif(5,6,b,-jut,band);
+serifs(6,5,c,d,jut,jut,band);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+charanchorcedillas_[charepscode]=z5;
+penlabels(range 1 thru 6);
+endchar;
+
+% v
+newchar("0076",380u#+stem#,ht_x#,0,
+ .1gap#+.7jut#,.1gap#+.7jut#);
+z1l=(l,h); 
+z4r=(r,h); 
+z5=(.5[x1l,x4r],band);
+y2r=y3l=0; 
+posin1(1,.9stem,1,x5-x1l,y5-y1l);
+posin4(1,.9stem,1,x5-x4r,y5-y4r);
+z2r=whatever[z1r,z5];
+z3l=whatever[z4l,z5];
+posin2(1,.9stem,1,x5-x1l,y5-y1l);
+posin3(1,.9stem,1,x5-x4r,y5-y4r);
+serifsarm(2,1,a,b,.8jut,.8jut,band);
+serifsarm(3,4,c,d,.8jut,.8jut,band);
+penlabels(range 1 thru 5); 
+endchar;
+
+% w
+newchar("0077",570u#+1.2stem#,ht_x#,0,
+ .1gap#+.8jut#,.1gap#+.8jut#);
+z1l=(l,h); 
+z4r=(.5[l,r]+.2stem,if monospace: .6h else: h fi); 
+z5=(.5[x1l,x4r],band);
+y2r=y3l=0; 
+posin1(1,.9stem,1,x5-x1l,y5-y1l);
+posin4(1,.9stem,1,x5-x4r,y5-y4r);
+z2r=whatever[z1r,z5];
+z3l=whatever[z4l,z5];
+posin2(1,.9stem,1,x5-x1l,y5-y1l);
+posin3(1,.9stem,1,x5-x4r,y5-y4r);
+z6l=(r-x4r+l,y4r);
+z6r=(r-x4l+l,y4l);
+z7l=(r-x3r+l,y3r);
+z7r=(r-x3l+l,y3l);
+z8l=(r-x2r+l,y2r);
+z8r=(r-x2l+l,y2l);
+z9l=(r-x1r+l,y1r);
+z9r=(r-x1l+l,y1l);
+z8=.5[z8l,z8r];
+z9=.5[z9l,z9r];
+penstroke z3e--z4e;
+penstroke z6e--z7e;
+serifsarm(2,1,a,b,.8jut,.8jut,band);
+serifsarm(8,9,c,d,.8jut,.8jut,band);
+charanchortops_[charepscode]=(.5[x1,x9],h);
+charanchorbots_[charepscode]=(.5[x1,x9],0);
+if monospace: stem:=stem/.9; fi
+penlabels(range 1 thru 9); 
+endchar;
+
+% x
+newchar("0078",320u#+2stem#,ht_x#,0,
+ .1gap#+if monospace: .5 else: .1 fi jut#,
+ .1gap#+if monospace: .5 else: .1 fi jut#);
+x1l=x3l=l;
+x2r=x4r=r;
+y1l=y4r=0;
+y2r=y3l=h;
+posin1(1,.9stem,1,x2r-x1l,y2r-x1l);
+posin2(1,.9stem,1,x2r-x1l,y2r-x1l);
+posin3(1,.9stem,1,x4r-x3l,y4r-y3l);
+posin4(1,.9stem,1,x4r-x3l,y4r-y3l);
+serifsarms(2,1,a,b,c,d,.8jut,.5jut,band);
+serifsarms(3,4,e,f,g,h,.5jut,.8jut,band);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+penlabels(range 1 thru 4); 
+endchar;
+
+% y
+newchar("0079",380u#+stem#,ht_x#,depth_desc#,
+ .1gap#+.7jut#,.1gap#+.7jut#);
+% as in v
+z1l=(l,h); 
+z4r=(r,h); 
+z5=z6r=(.5[x1l,x4r],.2h);
+y2r=y3l=0; 
+posin1(1,.9stem,1,x5-x1l,y5-y1l);
+posin4(1,.9stem,1,x5-x4r,y5-y4r);
+z2r=whatever[z1r,z5];
+z3l=whatever[z4l,z5];
+posin2(1,.9stem,1,x5-x1l,y5-y1l);
+posin3(1,.9stem,1,x5-x4r,y5-y4r);
+% additional
+y7=y7l=y7r=-d;
+z6l=whatever[z1l,z2l]=whatever[z3l,z4l];
+z6=.5[z6l,z6r];
+z7=whatever[z3,z4];
+z7l=whatever[z3l,z4l];
+z7r=whatever[z3r,z4r];
+serifsarm(6,1,a,b,.8jut,.8jut,band);
+serifsarm(3,4,c,d,.8jut,.8jut,band);
+serifsarm(4,7,e,f,1.1jut,.9jut,band);
+charanchortops_[charepscode]=(.5[x1,x4],h);
+charanchorbots_[charepscode]=(.5[x1,x4],-d);
+penlabels(range 1 thru 7); 
+endchar;
+
+% z
+newchar("007A",420u#,ht_x#,0,
+ .7gap#+.25jut#,.7gap#+.25jut#);
+x4l=x5=l;
+x6=r;
+x1=.05[l,r];
+x2=x3r=.95[l,r];
+y1l=y2l=h;
+y3r=y2r;
+y4l=y5l;
+y5r=y6r=0;
+pos1(band,right,-90);
+pos2(band,right,-90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+posin3(1,.9stem,1,x3r-x4l,y3r-y4l);
+posin4(1,.9stem,1,x3r-x4l,y3r-y4l);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+serif(2,1,a,-jut,stem);
+serif(5,6,b,-1.1jut,stem);
+charanchortops_[charepscode]=(.5[l,r],h);
+charanchorbots_[charepscode]=(.5[l,r],0);
+penlabels(range 1 thru 6); 
+endchar;
+
+% zero
+newchar("0030",500u#,ht_digits#,0,0,0);
+z1r=(.9w,.5h);
+z2r=(.5w,h);
+z3r=(.1w,.5h);
+z4r=(.5w,0);
+pos1(stem,up,0);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+if monospace:
+ z5r=point .5 of arc.l(1,2);
+ z6l=point .5 of arc.l(3,4);
+ pos5(.8stem,z6l-z5r,-90); % this is slightly inexact
+ pos6(.8stem,z6l-z5r,-90); % this is slightly inexact
+ penstroke z5e--z6e;
+ penlabels(range 1 thru 6);
+else:
+ penlabels(range 1 thru 4);
+fi
+endchar;
+
+% one
+newchar("0031",500u#,ht_digits#,0,0,0);
+x1=x2=.52w;
+x3l=.12w;
+x4l=x2l;
+y1=0;
+y2=y4l=h;
+y3l=.9h;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(.9stem,z4l-z3l,-90);
+pos4(.9stem,z4l-z3l,0);
+z5=whatever[z3r,z4r]=whatever[z1l,z2l];
+fill z3r--z5--z1l--z1r--z2r--z2l--z3l--cycle;
+serifs(2,1,a,b,1.8jut,1.8jut,band);
+penlabels(range 1 thru 5);
+endchar;
+
+% two
+newchar("0032",500u#,ht_digits#,0,0,0);
+x8r=x6r=x1r=.1w;
+x3r=x9r=.9w;
+x2r=x4=x5=.5[x3r,x1r];
+y2r=y1r=h;
+y3r=.75h;
+y4=y5=.5h;
+y6l=.2h;
+y8r=y9r=0;
+z7r=z8r;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,up,0);
+pos6(stem,down,180);
+pos7(stem,down,180);
+pos8(band,right,-90);
+pos9(band,right,-90);
+pos4(band,right,-90);
+pos5(band,left,90);
+penstroke z8e--z9e;
+penstroke arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke arc.e(5,6) & z6e--z7e;
+serif(8,9,a,-.8jut,stem);
+serif(2,1,b,-jut,stem);
+penlabels(range 1 thru 9);
+endchar;
+
+% three
+newchar("0033",500u#,ht_digits#,0,0,0);
+x1r=x9r=.1w;
+x3r=x7r=.9w;
+x2r=x8r=x4r=x6r=.5[x3r,x1r];
+x5=.8[x1r,x4];
+y1r=y2r=h;
+y3r=.5[y2,y4];
+y7r=.5[y6,y8];
+y8r=y9r=0;
+y5=.5h;
+y6l=y5r;
+y4l=y5l;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,up,0);
+pos4(.6band,right,-90);
+pos5(band,right,-90);
+pos6(.6band,left,90);
+pos7(stem,up,0);
+pos8(band,right,-90);
+pos9(band,right,-90);
+penstroke arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z9e--z8e & arc.e(8,7) & arc.e(7,6);
+fill z5l--z5r--z6l--z4l--cycle;
+serif(2,1,a,-jut,stem);
+serif(8,9,b,jut,stem);
+penlabels(range 1 thru 9);
+endchar;
+
+% four
+newchar("0034",500u#,ht_digits#,0,0,0);
+x1=x2=.7w;
+x3=.05w;
+x4=.95w;
+x7=x2l;
+y1=0;
+y2=h;
+y3=y4=.35h;
+y7=h-band;
+y6r=h;
+z5l=z3l;
+pos1(stem,up,0);
+pos2(stem,up,0);
+pos3(band,right,-90);
+pos4(band,right,-90);
+posin5(1,.9stem,1,x7-x5l,y7-y5l);
+posin6(1,.9stem,1,x7-x5l,y7-y5l);
+z6r=whatever[z5r,z7];
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+fill z5l--z5r--z7--z2--z6l--cycle;
+serifs(2,1,a,b,1.3jut,1.1jut,band);
+penlabels(range 1 thru 7);
+endchar;
+
+% five
+newchar("0035",500u#,ht_digits#,0,0,0);
+z1r=(.9w,.25h);
+z2=(.5w,.53h);
+z3r=(.1w,0);
+z4r=(.5w,0);
+z9r=z8l=(.12w,y2r);
+z7l=z6l=(x9r,h);
+z5l=(.88w,h);
+pos1(stem,up,0);
+pos2(band,left,90);
+pos3(band,right,-90);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+pos7(stem,up,0);
+pos8(stem,up,0);
+pos9(band,left,90);
+penstroke z3e--z4e & arc.e(4,1) & arc.e(1,2) & z2e--z9e;
+penstroke z7e--z8e;
+penstroke z5e--z6e;
+serif(6,5,a,jut,stem);
+serif(4,3,b,jut,stem);
+penlabels(range 1 thru 9);
+endchar;
+
+% six
+newchar("0036",500u#,ht_digits#,0,0,0);
+z1r=(.9w,.5[y2,y4]);
+z2=(.5w,.5h);
+z3r=(.1w,.5[y2,y4]);
+z4r=(.5w,0);
+z5r=(.5[x1,x1r],h);
+z6r=(.5w,h);
+z7r=(.1w,.5[y6,y8]);
+z8=(x3,y2);
+pos1(stem,up,0);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,left,90);
+pos6(band,left,90);
+pos7(stem,down,180);
+pos8(band,left,90);
+penstroke z5e--z6e & arc.e(6,7) & z7e--z3e 
+ & arc.e(3,4) & arc.e(4,1) & arc.e(1,2) & z2e--z8e;
+serif(6,5,a,jut,stem);
+penlabels(range 1 thru 8);
+endchar;
+
+% seven
+newchar("0037",500u#,ht_digits#,0,0,0);
+z1l=(.1w,h);
+z2l=(.9w,h);
+z3r=z2r;
+z4r=(.52w,0);
+pos1(band,right,-90);
+pos2(band,right,-90);
+pos3(stem,z3r-z4r,0);
+pos4(stem,z3r-z4r,0);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+serif(2,1,a,-jut,stem);
+penlabels(range 1 thru 4);
+endchar;
+
+% eight
+newchar("0038",500u#,ht_digits#,0,0,0);
+z1r=(.9w,.5[y2,y4]);
+z2r=(.5w,.5h+.1band);
+z3r=(.1w,.5[y2,y4]);
+z4r=(.6w,0);
+z5r=(.9w,.5[y6,y8]);
+z6r=(.5w,h);
+z7r=(.1w,.5[y6,y8]);
+z8r=(.5w,.5h-.1band);
+pos1(stem,up,0);
+pos2(.6band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(stem,up,0);
+pos6(band,left,90);
+pos7(stem,down,180);
+pos8(.6band,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+penstroke arc.e(5,6) & arc.e(6,7) & arc.e(7,8) & arc.e(8,5) & cycle; 
+penlabels(range 1 thru 8);
+endchar;
+
+% nine
+newchar("0039",500u#,ht_digits#,0,0,0);
+z1r=(.1w,.5[y2,y4]);
+z2=(.5w,.5h);
+z3r=(.9w,.5[y2,y4]);
+z4r=(.5w,h);
+z5r=(.5[x1,x1r],0);
+z6r=(.5w,0);
+z7r=(.9w,.5[y6,y8]);
+z8=(x3,y2);
+pos1(stem,down,180);
+pos2(band,right,-90);
+pos3(stem,up,0);
+pos4(band,left,90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+pos7(stem,up,0);
+pos8(band,right,-90);
+penstroke z5e--z6e & arc.e(6,7) & z7e--z3e 
+ & arc.e(3,4) & arc.e(4,1) & arc.e(1,2) & z2e--z8e;
+serif(6,5,a,jut,stem);
+penlabels(range 1 thru 8);
+endchar;
+
+% space
+newchar("0020",font_normal_space_,ht#,0,0,0);
+endchar;
+
+% visiblespace
+newchar("2420",font_normal_space_,0,.5depth_desc#,0,0);
+x1r=.1w;
+x2r=.9w;
+y1r=y2r=-d;
+z3l=z1r;
+z4l=(x1r,0);
+z5r=z2r;
+z6r=(x2r,0);
+pos1(.8stem,right,-90);
+pos2(.8stem,right,-90);
+pos3(.8stem,up,0);
+pos4(.8stem,up,0);
+pos5(.8stem,up,0);
+pos6(.8stem,up,0);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+penlabels(range 1 thru 6);
+endchar;
+
+% zerowidthspace
+newchar("200B",0,ht#,0,0,0);
+endchar;
+
+% perthousandzero
+newchar("E000",220u#+.8stem#,.5ht#,0,
+ .5gap#,.5gap#);
+if monospace:
+ l:=.5w-.5*.42/(600u+.8stem+gap)*(600u+.8stem)*font_normal_space_*hppp;
+ r:=w-l;
+fi
+z1r=(r,.5h);
+z2r=(.5[l,r],h);
+z3r=(l,.5h);
+z4r=(.5[l,r],0);
+pos1(.8stem,up,0);
+pos2(.8band,left,90);
+pos3(.8stem,down,180);
+pos4(.8band,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+penlabels(range 1 thru 4);
+endchar;
+
+% percent
+newchar("0025",600u#+.8stem#,ht#,0,
+ .5gap#,.5gap#);
+% upper left zero
+z1r=(.42[l,r],.75h);
+z2r=(.5[x1r,x3r],h);
+z3r=(l,.75h);
+z4r=(.5[x1r,x3r],.5h);
+pos1(.8stem,up,0);
+pos2(.8band,left,90);
+pos3(.8stem,down,180);
+pos4(.8band,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3) & arc.e(3,4) & arc.e(4,1) & cycle; 
+% slash
+z5l=(.5[x3l,x4r],0);
+z6r=(r-x5l+l,h);
+posin5(1,.8stem,1,x6r-x5l,y6r-y5l);
+posin6(1,.8stem,1,x6r-x5l,y6r-y5l);
+penstroke z5e--z6e;
+% lower right zero
+z7r=(r,.25h);
+z8r=z2r+z7r-z1r;
+z9r=z3r+z7r-z1r;
+z10r=z4r+z7r-z1r;
+pos7(.8stem,up,0);
+pos8(.8band,left,90);
+pos9(.8stem,down,180);
+pos10(.8band,right,-90);
+penstroke arc.e(7,8) & arc.e(8,9) & arc.e(9,10) & arc.e(10,7) & cycle;
+penlabels(range 1 thru 10);
+endchar;
+
+if not monospace:
+
+% perthousand
+newchainedchar("2030","0025","E000",0);
+
+% pertenthousand
+newchainedchar("2031","2030","E000",0);
+
+fi
+
+% period
+newchar("002E",dotsize#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1=x2=.5[l,r];
+y2=0;
+y1=dotsize;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% periodcenter
+newchar("00B7",dotsize#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1=x2=.5[l,r];
+.5[y1,y2]=.4h;
+y1-y2=dotsize;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% colon
+newchar("003A",dotsize#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1=x2=x3=x4=.5[l,r];
+y2=h-y4=0;
+y1=h-y3=dotsize;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+pos3(dotsize,up,0);
+pos4(dotsize,up,0);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% semicolon
+newchar("003B",dotsize#,ht_x#,.5depth_desc#,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1=x2=x5=x6=.5[l,r];
+x4l=x2l;
+y2=h-y6=0;
+y4l=-d;
+y1=h-y5=dotsize;
+z3r=z2r;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+posin4(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+pos5(dotsize,up,0);
+pos6(dotsize,up,0);
+penstroke z1e--z2e--z3e--z4e;
+penstroke z5e--z6e;
+penlabels(range 1 thru 6);
+endchar;
+
+% comma
+newchar("002C",dotsize#,ht_x#,.5depth_desc#,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1=x2=.5[l,r];
+x4l=x2l;
+y2=0;
+y4l=-d;
+y1=dotsize;
+z3r=z2r;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+posin4(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+penstroke z1e--z2e--z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% quotesinglbase
+newchar("201A",dotsize#,ht_x#,.5depth_desc#,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1=x2=.5[l,r];
+x4l=x2l;
+y2=0;
+y4l=-d;
+y1=dotsize;
+z3r=z2r;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+posin4(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+penstroke z1e--z2e--z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% quoteleft
+newchar("2018",dotsize#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1l=l;
+x4r=x2r=x1r;
+y4r=h;
+y2l=y4r-.5depth_desc;
+y1r=y2l-dotsize;
+z3l=z2l;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3l-x4r,y3l-y4r);
+posin4(1,.5dotsize,1,x3l-x4r,y3l-y4r);
+penstroke z1e--z2e--z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% quoteright
+newchar("2019",dotsize#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1r=x2r=r;
+x4l=x2l;
+y1r=h;
+y2r=y1r-dotsize;
+y4l=y2r-.5depth_desc;
+z3r=z2r;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+posin4(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+penstroke z1e--z2e--z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% quotedblbase
+newchar("201E",if monospace: .5* fi (90u#+2dotsize#),ht_x#,.5depth_desc#,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1l=x2l=x4l=l;
+y2r=0;
+y4l=-d;
+y1r=dotsize;
+z3r=z2r;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+posin4(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+z5l=z1l shifted (r-l-dotsize,0);
+z5r=z1r shifted (r-l-dotsize,0);
+z6l=z2l shifted (r-l-dotsize,0);
+z6r=z2r shifted (r-l-dotsize,0);
+z7l=z3l shifted (r-l-dotsize,0);
+z7r=z3r shifted (r-l-dotsize,0);
+z8l=z4l shifted (r-l-dotsize,0);
+z8r=z4r shifted (r-l-dotsize,0);
+penstroke z1e--z2e--z3e--z4e;
+penstroke z5e--z6e--z7e--z8e;
+penlabels(range 1 thru 8);
+endchar;
+
+% quotedblright
+newchar("201D",if monospace: .5* fi (90u#+2dotsize#),ht#+dotsize#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1l=x2l=x4l=l;
+y1r=h;
+y2r=y1r-dotsize;
+y4l=y2r-.5depth_desc;
+z3r=z2r;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+posin4(1,.5dotsize,1,x3r-x4l,y3r-y4l);
+z5l=z1l shifted (r-l-dotsize,0);
+z5r=z1r shifted (r-l-dotsize,0);
+z6l=z2l shifted (r-l-dotsize,0);
+z6r=z2r shifted (r-l-dotsize,0);
+z7l=z3l shifted (r-l-dotsize,0);
+z7r=z3r shifted (r-l-dotsize,0);
+z8l=z4l shifted (r-l-dotsize,0);
+z8r=z4r shifted (r-l-dotsize,0);
+penstroke z1e--z2e--z3e--z4e;
+penstroke z5e--z6e--z7e--z8e;
+penlabels(range 1 thru 8);
+endchar;
+
+% quotedblleft
+newchar("201C",if monospace: .5* fi (90u#+2dotsize#),ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1l=l;
+x4r=x2r=x1r;
+y4r=h;
+y2l=y4r-.5depth_desc;
+y1r=y2l-dotsize;
+z3l=z2l;
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+posin3(1,.5dotsize,1,x3l-x4r,y3l-y4r);
+posin4(1,.5dotsize,1,x3l-x4r,y3l-y4r);
+z5l=z1l shifted (r-l-dotsize,0);
+z5r=z1r shifted (r-l-dotsize,0);
+z6l=z2l shifted (r-l-dotsize,0);
+z6r=z2r shifted (r-l-dotsize,0);
+z7l=z3l shifted (r-l-dotsize,0);
+z7r=z3r shifted (r-l-dotsize,0);
+z8l=z4l shifted (r-l-dotsize,0);
+z8r=z4r shifted (r-l-dotsize,0);
+penstroke z1e--z2e--z3e--z4e;
+penstroke z5e--z6e--z7e--z8e;
+penlabels(range 1 thru 8);
+endchar;
+
+% quotesingle
+newchar("0027",dotsize#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1=x2=.5[l,r];
+y2=h;
+y1=.65h;
+pos1(stem,up,0);
+pos2(stem,up,0);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% quotedbl
+newchar("0022",if monospace: .5* fi (80u#+1.8stem#),ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1l=x2l=l;
+x3r=x4r=r;
+y2l=y3r=h;
+y1l=y4r=.65h;
+pos1(.9stem,up,0);
+pos2(.9stem,up,0);
+pos3(.9stem,up,0);
+pos4(.9stem,up,0);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% exclam
+newchar("0021",.95dotsize#,ht#,0,
+ gap#+.5jut#,gap#+.5jut#);
+x1=x2=x3=x4=.5[l,r];
+y2=0;
+y1=.95dotsize;
+y3=h;
+y4=2.5dotsize;
+pos1(.95dotsize,up,0);
+pos2(.95dotsize,up,0);
+pos3(dotsize,up,0);
+pos4(.7dotsize,up,0);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% exclamdown
+newturnedchar("00A1","0021",-depth_desc#);
+
+% question
+newchar("003F",350u#+.5stem#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1r=l;
+x3r=r;
+x2r=.5[x1r,x3];
+x4l=x5=x6=x7=x8=.45[x1r,x3];
+y1r=y2r=h;
+y4l=y5=.5h;
+y3r=.5[y4,y2];
+y6=1.6dotsize;
+y7=0;
+y8=.95dotsize;
+pos1(band,left,90);
+pos2(band,left,90);
+pos4(band,right,-90);
+pos3(stem,up,0);
+pos5(stem,up,0);
+pos6(stem,up,0);
+pos7(.95dotsize,up,0);
+pos8(.95dotsize,up,0);
+penstroke arc.e(4,3) & arc.e(3,2) & z2e--z1e;
+penstroke z5e--z6e;
+penstroke z7e--z8e;
+serif(2,1,a,-jut,stem);
+penlabels(range 1 thru 8);
+endchar;
+
+% questiondown
+newturnedchar("00BF","003F",-depth_desc#);
+
+% ampersand
+newchar("0026",500u#+.5stem#,ht#,0,
+ .75gap#+.35jut#,.5gap#);
+x3r=x7r=l;
+x12=r;
+x1r=.7[x7,x12];
+x9r=x13=.55[x7,x12];
+x2r=x8r=x4r=x6r=.5[x3r,x1r];
+x5=.8[x1r,x4];
+x10=x11=.5[x12,x13];
+y1r=y2r=h;
+y3r=.5[y2,y4];
+y7r=y10=.5[y6,y8];
+y8r=y9r=0;
+y5=y11=y12=y13=.5h;
+y6l=y5r;
+y4l=y5l;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(.6band,right,-90);
+pos5(band,right,-90);
+pos6(.6band,left,90);
+pos7(stem,down,180);
+pos8(band,right,-90);
+pos9(band,right,-90);
+pos10(stem,up,0);
+pos11(stem,up,0);
+pos12(band,left,90);
+pos13(band,left,90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4);
+penstroke arc.e(6,7) & arc.e(7,8) 
+ & z8e--z9e & arc.e(9,10) & z10e--z11e;
+fill z5l--z5r--z6l--z4l--cycle;
+penstroke z12e--z13e;
+serif(2,1,a,jut,stem);
+penlabels(range 1 thru 13);
+endchar;
+
+% section
+newchar("00A7",240u#+band#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1r=r-.5band;
+x3r=x6r=l;
+x2r=x7=x4r=x5r=.5[l,r];
+y1r=y2r=h;
+y3=.5[y4l,y2l];
+y6=.5h=.5[y4l,y7r]=y7+h/6;
+y4l-y5l=band;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(.6band,right,-90);
+pos5(.6band,left,90);
+pos6(stem,down,180);
+pos7(band,right,-90);
+path halfsection;
+halfsection=z1r--z2r & arc.r(2,3) & arc.r(3,4) & z4r--z5r & arc.r(5,6) 
+ & arc.r(6,7) & z7r-- reverse (z1l--z2l & arc.l(2,3) & arc.l(3,4) 
+ & z4l--z5l & arc.l(5,6) & arc.l(6,7) & z7l--z7l)--cycle;
+fill halfsection;
+fill halfsection rotatedaround ((.5[l,r],.5h),180);
+penlabels(range 1 thru 7);
+endchar;
+
+% parenleft
+newchar("0028",150u#+.5stem#,1.1ht#,.1ht#,
+ gap#+jut#,.75gap#+.35jut#);
+x1r=x3r=r;
+x2r=l;
+y1r=h;
+y2r=.5[y1r,y3r];
+y3r=-d;
+pos1(band,left,90);
+pos2(stem,down,180);
+pos3(band,right,-90);
+penstroke arc.e(1,2) & arc.e(2,3);
+penlabels(range 1 thru 3);
+endchar;
+
+% parenright
+newchar("0029",150u#+.5stem#,1.1ht#,.1ht#,
+ .75gap#+.35jut#,gap#+jut#);
+x1r=x3r=l;
+x2r=r;
+y1r=h;
+y2r=.5[y1r,y3r];
+y3r=-d;
+pos1(band,left,90);
+pos2(stem,up,0);
+pos3(band,right,-90);
+penstroke arc.e(3,2) & arc.e(2,1);
+penlabels(range 1 thru 3);
+endchar;
+
+% bracketleft
+newchar("005B",150u#+.5stem#,1.1ht#,.1ht#,
+ gap#+jut#,.75gap#+.35jut#);
+x5l=x6l=l;
+x2l=x4r=r;
+y2l=y5l=h;
+y4r=y6l=-d;
+z1l=z5l;
+z3r=z6l;
+pos5(stem,up,0);
+pos6(stem,up,0);
+pos1(band,right,-90);
+pos2(band,right,-90);
+pos3(band,right,-90);
+pos4(band,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+penlabels(range 1 thru 6);
+endchar;
+
+% bracketright
+newchar("005D",150u#+.5stem#,1.1ht#,.1ht#,
+ .75gap#+.35jut#,gap#+jut#);
+x5r=x6r=r;
+x2l=x4r=l;
+y2l=y5=h;
+y4r=y6=-d;
+z1l=z5l;
+z3r=z6l;
+pos5(stem,up,0);
+pos6(stem,up,0);
+pos1(band,right,-90);
+pos2(band,right,-90);
+pos3(band,right,-90);
+pos4(band,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+penlabels(range 1 thru 6);
+endchar;
+
+% braceleft
+newchar("007B",300u#,1.1ht#,.1ht#,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1r=x8r=r;
+x2=x3=x6=x7=.5[l,r];
+x4l=x5l=l;
+y1r=h;
+y2=.8[-d,h];
+y3=.7[-d,h];
+.5[y4l,y5l]=.5[-d,h];
+y4l-y5l=band;
+y6=.3[-d,h];
+y7=.2[-d,h];
+y8r=-d;
+pos1(band,left,90);
+pos2(stem,down,180);
+pos3(stem,up,0);
+pos4(.6band,right,-90);
+pos5(.6band,left,90);
+pos6(stem,up,0);
+pos7(stem,down,180);
+pos8(band,right,-90);
+penstroke arc.e(1,2);
+fill z2l--z2r--z3l--z3r--cycle;
+penstroke arc.e(4,3);
+penstroke arc.e(6,5);
+fill z6l--z6r--z7l--z7r--cycle;
+penstroke arc.e(7,8);
+penlabels(range 1 thru 10);
+endchar;
+
+% braceright
+newchar("007D",300u#,1.1ht#,.1ht#,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1r=x8r=l;
+x2=x3=x6=x7=.5[l,r];
+x4l=x5l=r;
+y1r=h;
+y2=.8[-d,h];
+y3=.7[-d,h];
+.5[y4l,y5l]=.5[-d,h];
+y4l-y5l=band;
+y6=.3[-d,h];
+y7=.2[-d,h];
+y8r=-d;
+pos1(band,left,90);
+pos2(stem,up,0);
+pos3(stem,down,180);
+pos4(.6band,right,-90);
+pos5(.6band,left,90);
+pos6(stem,down,180);
+pos7(stem,up,0);
+pos8(band,right,-90);
+penstroke arc.e(2,1);
+fill z2l--z2r--z3l--z3r--cycle;
+penstroke arc.e(3,4);
+penstroke arc.e(5,6);
+fill z6l--z6r--z7l--z7r--cycle;
+penstroke arc.e(8,7);
+penlabels(range 1 thru 10);
+endchar;
+
+% hyphen
+newchar("002D",240u#,ht#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1=l;
+x2=r;
+y1=y2=ht_math;
+pos1(band,right,-90);
+pos2(band,right,-90);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% hyphentwo
+newchar("2010",240u#,ht#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1=l;
+x2=r;
+y1=y2=ht_math;
+pos1(band,right,-90);
+pos2(band,right,-90);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% endash
+newchar("2013",500u#,ht#,0,0,0);
+x1=0;
+x2=w;
+y1=y2=ht_math;
+pos1(band,right,-90);
+pos2(band,right,-90);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% emdash
+newchar("2014",1000u#,ht#,0,0,0);
+x1=0;
+x2=w;
+y1=y2=ht_math;
+pos1(band,right,-90);
+pos2(band,right,-90);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% underscore
+newchar("005F",500u#,0,.5depth_desc#,0,0);
+x1=0;
+x2=w;
+y1r=y2r=-d;
+pos1(.8band,right,-90);
+pos2(.8band,right,-90);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% minus
+newchar("2212",600u#,ht_x#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1=l;
+x2=r;
+y1=y2=ht_math;
+pos1(stem,right,-90);
+pos2(stem,right,-90);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% equal
+newchar("003D",600u#,ht_x#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1=x3=l;
+x2=x4=r;
+y1=y2=ht_math+1.2stem;
+y3=y4=ht_math-1.2stem;
+pos1(stem,right,-90);
+pos2(stem,right,-90);
+pos3(stem,right,-90);
+pos4(stem,right,-90);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% plus
+newchar("002B",600u#,ht_x#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1=l;
+x2=r;
+x3=x4=.5[l,r];
+y1=y2=y3+.5(l-r)=y4-.5(l-r)=ht_math;
+pos1(stem,right,-90);
+pos2(stem,right,-90);
+pos3(stem,up,0);
+pos4(stem,up,0);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% multiply
+newchar("00D7",600u#,ht_x#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1=x3=.15[l,r];
+x2=x4=.85[l,r];
+y1=y4=ht_math+.35*(r-l);
+y3=y2=ht_math-.35*(r-l);
+pos1(stem,dir(-45),45);
+pos2(stem,dir(-45),45);
+pos3(stem,dir(45),-45);
+pos4(stem,dir(45),-45);
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penlabels(range 1 thru 4);
+endchar;
+
+% less
+newchar("003C",600u#,ht_x#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1r=x3r=r;
+x2l=l;
+y2l=ht_math;
+y3r-y2l=y2l-y1r=.3ht;
+posin1(1,stem,1,x1r-x2l,y1r-y2l);
+posin2(1,stem,1,x1r-x2l,y1r-y2l);
+posin3(1,stem,1,x3r-x2l,y3r-y2l);
+z4=whatever[z1r,z2r]=z3r+whatever*(z2l-z3l);
+z5=z1r+whatever*dir(angle(z1r-z2r)+90)=whatever[z2l,z1l];
+z6=z3r+whatever*dir(angle(z3r-z2r)+90)=whatever[z2l,z3l];
+fill z5--z1r--z4--z3r--z6--z2l--cycle;
+penlabels(range 1 thru 6);
+endchar;
+
+% greater
+newchar("003E",600u#,ht_x#,0,
+ .6gap#+.25jut#,.6gap#+.25jut#);
+x1l=x3l=l;
+x2r=r;
+y2r=ht_math;
+y3l-y2r=y2r-y1l=.3ht;
+posin1(1,stem,1,x2r-x1l,y2r-y1l);
+posin2(1,stem,1,x2r-x1l,y2r-y1l);
+posin3(1,stem,1,x2r-x3l,y2r-y3l);
+z4=whatever[z1l,z2l]=z3l+whatever*(z2r-z3r);
+z5=z1l+whatever*dir(angle(z1r-z2r)+90)=whatever[z2r,z1r];
+z6=z3l+whatever*dir(angle(z3r-z2r)+90)=whatever[z2r,z3r];
+fill z5--z1l--z4--z3l--z6--z2r--cycle;
+penlabels(range 1 thru 6);
+endchar;
+
+% guilsinglleft
+newchar("2039",200u#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1r=x3r=r;
+x2l=l;
+y2l=.5h;
+y3r-y2l=y2l-y1r=.45h;
+posin1(1,stem,1,x1r-x2l,y1r-y2l);
+posin2(1,stem,1,x1r-x2l,y1r-y2l);
+posin3(1,stem,1,x3r-x2l,y3r-y2l);
+z4=whatever[z1r,z2r]=z3r+whatever*(z2l-z3l);
+fill z1l--z1r--z4--z3r--z3l--z2l--cycle;
+penlabels(range 1 thru 4);
+endchar;
+
+% guilsinglright
+newchar("203A",200u#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1l=x3l=l;
+x2r=r;
+y2r=.5h;
+y3l-y2r=y2r-y1l=.45h;
+posin1(1,stem,1,x2r-x1l,y2r-y1l);
+posin2(1,stem,1,x2r-x1l,y2r-y1l);
+posin3(1,stem,1,x2r-x3l,y2r-y3l);
+z4=whatever[z1l,z2l]=z3l+whatever*(z2r-z3r);
+fill z1l--z1r--z2r--z3r--z3l--z4--cycle;
+penlabels(range 1 thru 4);
+endchar;
+
+% guillemotleft
+newchar("00AB",300u#+1.1stem#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1r=x3r=.53[l,r];
+x2l=l;
+y2l=.5h;
+y3r-y2l=y2l-y1r=.45h;
+posin1(1,stem,1,x1r-x2l,y1r-y2l);
+posin2(1,stem,1,x1r-x2l,y1r-y2l);
+posin3(1,stem,1,x3r-x2l,y3r-y2l);
+z4=whatever[z1r,z2r]=z3r+whatever*(z2l-z3l);
+z5r=(r,y1r);
+z5l=z1l+z5r-z1r;
+z6r=z2r+z5r-z1r;
+z6l=z2l+z5r-z1r;
+z7r=z3r+z5r-z1r;
+z7l=z3l+z5r-z1r;
+fill z1l--z1r--z4--z3r--z3l--z2l--cycle;
+penstroke z5e--z6e--z7e;
+penlabels(range 1 thru 7);
+endchar;
+
+% guillemotright
+newchar("00BB",300u#+1.1stem#,ht_x#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x1l=x3l=l;
+x2r=.53[l,r];
+y2r=.5h;
+y3l-y2r=y2r-y1l=.45h;
+posin1(1,stem,1,x2r-x1l,y2r-y1l);
+posin2(1,stem,1,x2r-x1l,y2r-y1l);
+posin3(1,stem,1,x2r-x3l,y2r-y3l);
+z4=whatever[z1l,z2l]=z3l+whatever*(z2r-z3r);
+fill z1l--z1r--z2r--z3r--z3l--z4--cycle;
+z6r=(r,y2r);
+z6l=z2l+z6r-z2r;
+z5r=z1r+z6r-z2r;
+z5l=z1l+z6r-z2r;
+z7r=z3r+z6r-z2r;
+z7l=z3l+z6r-z2r;
+fill z1l--z1r--z4--z3r--z3l--z2l--cycle;
+penstroke z5e--z6e--z7e;
+penlabels(range 1 thru 7);
+endchar;
+
+% slash
+newchar("002F",280u#+stem#,1.1ht#,.1ht#,
+ .5gap#,.5gap#);
+z1l=(l,-d);
+z2r=(r,h);
+posin1(1,.9stem,1,x2r-x1l,y2r-y1l);
+posin2(1,.9stem,1,x2r-x1l,y2r-y1l);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% backslash
+newchar("005C",280u#+stem#,1.1ht#,.1ht#,
+ .5gap#,.5gap#);
+z1l=(l,h);
+z2r=(r,-d);
+posin1(1,.9stem,1,x2r-x1l,y2r-y1l);
+posin2(1,.9stem,1,x2r-x1l,y2r-y1l);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% bar
+newchar("007C",.9stem#,1.1ht#,.1ht#,
+ gap#+jut#,gap#+jut#);
+z1l=(l,-d);
+z2l=(l,h);
+pos1(.9stem,z2l-z1l,0);
+pos2(.9stem,z2l-z1l,0);
+penstroke z1e--z2e;
+penlabels(range 1 thru 2);
+endchar;
+
+% numbersign
+newchar("0023",540u#,ht#,0,0,0);
+z1=(.25w,0);
+z2=(.45w,h);
+z3=(.55w,0);
+z4=(.75w,h);
+z5l=(.1w,.4h);
+z8r=(.9w,.6h);
+y7r=y8r;
+y6l=y5l;
+z7r=z5l+whatever*(z2-z1);
+z6l=z8r+whatever*(z2-z1);
+pos1(.8stem,z2-z1,0);
+pos2(.8stem,z2-z1,0);
+pos3(.8stem,z2-z1,0);
+pos4(.8stem,z2-z1,0);
+pos5(.8stem,right,angle(z1-z2));
+pos8(.8stem,right,angle(z1-z2));
+pos6(.8stem,right,angle(z1-z2));
+pos7(.8stem,right,angle(z1-z2));
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+penstroke z7e--z8e;
+penlabels(range 1 thru 8);
+endchar;
+
+% asterisk
+newchar("002A",.5ht#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+z0=(.5[l,r],.75h);
+z1=(.5[l,r],h);
+z2=(x0,y0+.6stem*cosd(36)/(2*sind(36)));
+z3l=z1l rotatedaround(z0,72);
+z3r=z1r rotatedaround(z0,72);
+z4l=z2l rotatedaround(z0,72);
+z5l=z1l rotatedaround(z0,2*72);
+z5r=z1r rotatedaround(z0,2*72);
+z6l=z2l rotatedaround(z0,2*72);
+z7l=z1l rotatedaround(z0,3*72);
+z7r=z1r rotatedaround(z0,3*72);
+z8l=z2l rotatedaround(z0,3*72);
+z9l=z1l rotatedaround(z0,4*72);
+z9r=z1r rotatedaround(z0,4*72);
+penpos1(.9stem,0);
+penpos2(.6stem,0);
+fill z2r--z1r--z1l--z2l--z3r--z3l--z4l--z5r
+ --z5l--z6l--z7r--z7l--z8l--z9r--z9l--cycle;
+penlabels(range 0 thru 9);
+endchar;
+
+% at
+newchar("0040",400u#+stem#,ht#,0,
+ .75gap#+.35jut#,.75gap#+.35jut#);
+x6r=x7r=r;
+x1=x5=x6;
+x3=.4[x9,x6];
+x2=x4=.5[x3,x6l];
+y4=y5=.3h;
+y6=y5r;
+y1=y2=.7h;
+y7=y1r;
+y3=.5[y4,y2];
+z8r=(.5[x9,x6],h);
+z9r=(l,.5h);
+z10r=(x8r,0);
+z11r=(.9[x9,x6],0);
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,right,-90);
+pos6(stem,up,0);
+pos7(stem,up,0);
+pos8(band,left,90);
+pos9(stem,down,180);
+pos10(band,right,-90);
+pos11(band,right,-90);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4) & z4e--z5e;
+penstroke z6e--z7e & arc.e(7,8) & arc.e(8,9) & arc.e(9,10) & z10e--z11e; 
+charanchortoprights_[charepscode]=(x6r+40u,ht_x);
+penlabels(range 1 thru 11);
+endchar;
+
+% dollar
+newchar("0024",500u#,1.1ht#,.1ht#,0,0);
+x3r=x8r=.1w;
+x1r=x6r=.9w;
+x2=x4=x5=x7=x9=x10=.5w;
+y1r=y2r=ht;
+y8r=y7r=0;
+y4=y5=.5ht;
+y3=.5[y4,y2];
+y6=.5[y7,y5];
+y9=-d;
+y10=h;
+pos1(band,left,90);
+pos2(band,left,90);
+pos3(stem,down,180);
+pos4(band,right,-90);
+pos5(band,left,90);
+pos6(stem,up,0);
+pos7(band,right,-90);
+pos8(band,right,-90);
+pos9(.6stem,up,0);
+pos10(.6stem,up,0);
+penstroke z1e--z2e & arc.e(2,3) & arc.e(3,4);
+penstroke z8e--z7e & arc.e(7,6) & arc.e(6,5);
+penstroke z9e--z10e;
+serif(2,1,a,jut,stem);
+serif(7,8,b,jut,stem);
+penlabels(range 1 thru 10);
+endchar;
+
+% sterling
+newchar("00A3",500u#,ht_asc#,0,0,0);
+x1r=x2r=.25w;
+x3=x6=.7w;
+x4r=x8r=.9w;
+x5=x7r=.1w;
+y1=0;
+y2=.7h;
+y5=y6=.5h;
+y3r=y4r=h;
+y7r=y8r=0;
+pos1(stem,down,180);
+pos2(stem,down,180);
+pos3(band,left,90);
+pos4(band,left,90);
+pos5(band,right,-90);
+pos6(band,right,-90);
+pos7(band,right,-90);
+pos8(band,right,-90);
+penstroke z4e--z3e & arc.e(3,2) & z2e--z1e;
+penstroke z5e--z6e;
+penstroke z7e--z8e;
+serif(3,4,a,jut,stem);
+serif(7,8,b,-jut,stem);
+penlabels(range 1 thru 8);
+endchar;
+
+% accents:
+
+% dotaccent
+newchar("02D9",dotsize#,ht_x#+ht_acc#,0,
+ .5gap#,.5gap#);
+x1l=x2l=l;
+y1r=y2r-dotsize=.5[ht_x,h];
+pos1(dotsize,up,0);
+pos2(dotsize,up,0);
+penstroke z1e--z2e;
+charanchortops_[charepscode]=(x1,ht_x);
+penlabels(range 1 thru 2);
+endchar;
+
+% lowercase composite letters:
+
+% i 
+newcombinedchar("i","0131","02D9","top",ht_x#+ht_acc#,0);
+
+% j
+newcombinedchar("j","0237","02D9","top",ht_x#+ht_acc#,depth_desc#);
+

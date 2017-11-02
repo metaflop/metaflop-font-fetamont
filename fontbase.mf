@@ -1,0 +1,443 @@
+boolean monospace;
+numeric charwidths_[];
+numeric charheights_[];
+numeric chardepths_[];
+numeric charitalcorrs_[];
+picture charpictures_[];
+pair charanchortops_[]; 
+pair charanchorbots_[]; 
+pair charanchortoprights_[];
+pair charanchorcedillas_[];
+
+monospace:= if monovalue=0: false else true fi;
+
+ht_digits#:=ht#;          % height of 0,1,...
+
+def font_setup =
+ define_pixels(
+  u,
+  ht,
+  ht_x,
+  ht_digits,
+  ht_asc,
+  ht_acc,
+  ht_math,
+  depth_desc,
+  gap,
+  stem,
+  band,
+  jut,
+  gap_cap,
+  stem_cap,
+  band_cap,
+  jut_cap,
+  dotsize
+ );
+ font_slant font_slant_;       
+enddef;
+
+def newchar(expr code,width,height,depth,leftbearing,rightbearing)=
+ if monospace:
+  if width=0:
+   beginchar(code,0,height,depth);
+   squeeze:=0;
+   l:=0;
+   r:=0;
+  else:  
+   beginchar(code,font_normal_space_,height,depth);
+   squeeze:=font_normal_space_/(width+leftbearing+rightbearing);
+   l:=leftbearing*squeeze*hppp;
+   r:=w-rightbearing*squeeze*hppp;
+  fi
+ else:
+  beginchar(code,width+leftbearing+rightbearing,height,depth);
+  squeeze:=1;
+  l:=leftbearing*hppp;
+  r:=w-rightbearing*hppp;
+ fi
+ currenttransform:=identity slanted font_slant_ yscaled aspect_ratio;
+enddef;
+
+extra_endchar := 
+ extra_endchar
+ &"charpictures_[charepscode]:=currentpicture;"
+ &"charwidths_[charepscode]=charwd;"
+ &"charheights_[charepscode]=charht;"
+ &"chardepths_[charepscode]=chardp;"
+ &"charitalcorrs_[charepscode]=charic;";
+ 
+% the glyph with code a is anchor wise combined
+% from the glyphs with code b (base) and code c (accent)
+% the new height and depth shall be h and d
+def newcombinedchar(expr a,b,c,anchor,h,d) =
+ beginchar(a,charwidths_[epscode(b)],h,d);
+ charic:=charitalcorrs_[epscode(b)];
+ charanchortops_[epscode(a)]=charanchortops_[epscode(b)];
+ charanchorbots_[epscode(a)]=charanchorbots_[epscode(b)];
+ charanchortoprights_[epscode(a)]=charanchortoprights_[epscode(b)];
+ charanchorcedillas_[epscode(a)]=charanchorcedillas_[epscode(b)];
+ addto currentpicture also charpictures_[epscode(b)];
+ if anchor="top":
+  addto currentpicture also charpictures_[epscode(c)] shifted 
+  ((charanchortops_[epscode(b)]-charanchortops_[epscode(c)]) slanted font_slant_);
+ elseif anchor="bot":
+  addto currentpicture also charpictures_[epscode(c)] shifted 
+  ((charanchorbots_[epscode(b)]-charanchorbots_[epscode(c)]) slanted font_slant_);
+ elseif anchor="topright":
+  addto currentpicture also charpictures_[epscode(c)] shifted 
+  ((charanchortoprights_[epscode(b)]-charanchortoprights_[epscode(c)]) slanted font_slant_);
+ elseif anchor="cedilla":
+  addto currentpicture also charpictures_[epscode(c)] shifted 
+  ((charanchorcedillas_[epscode(b)]-charanchorcedillas_[epscode(c)]) slanted font_slant_);
+ else:
+  errmessage "Wrong anchor name";
+ fi
+ endchar;
+enddef;
+
+% newchainedchar chains two chars like "f" (code b) 
+% and "l" (code c) to "fl" (code a)
+% inbetween the chars may be a gap g
+% this is considered obsolete
+% as it CANNOT work for monospaced (unfortunately)
+def newchainedchar(expr a,b,c,g) =
+ beginchar(a,
+  charwidths_[epscode(b)]
+  +charwidths_[epscode(c)]+g/hppp,
+  max(charheights_[epscode(b)],
+  charheights_[epscode(c)]),
+  max(chardepths_[epscode(b)],
+  chardepths_[epscode(c)])
+ );
+ addto currentpicture also charpictures_[epscode(b)];
+ addto currentpicture also charpictures_[epscode(c)] 
+  shifted (charwidths_[epscode(b)]*hppp+g,0);
+ endchar;
+enddef;
+
+% copy a letter with code b to code a
+def newcopiedchar(expr a,b) =
+ beginchar(a,
+  charwidths_[epscode(b)],
+  charheights_[epscode(b)],
+  chardepths_[epscode(b)]
+ );
+ charic:=charitalcorrs_[epscode(b)];
+ charanchortops_[epscode(a)]=charanchortops_[epscode(b)];
+ charanchorbots_[epscode(a)]=charanchorbots_[epscode(b)];
+ charanchortoprights_[epscode(a)]=charanchortoprights_[epscode(b)];
+ charanchorcedillas_[epscode(a)]=charanchorcedillas_[epscode(b)];
+ addto currentpicture also charpictures_[epscode(b)];
+ endchar;
+enddef;
+
+% turn a letter with code b to code a
+% by 180 degree such that the old height
+% is now at depth c
+def newturnedchar(expr a,b,c) =
+ beginchar(a,
+  charwidths_[epscode(b)],
+  charheights_[epscode(b)]+c,
+  chardepths_[epscode(b)]-c
+ );
+ addto currentpicture also charpictures_[epscode(b)] 
+  rotatedaround ((.5charwidths_[epscode(b)],
+  (.5charheights_[epscode(b)]+.5*c))*hppp,180);
+ endchar;
+enddef;
+
+% sign returns the signature of a number
+def sign(expr a) = 
+ if a<0:
+  -1 %false
+ else:
+  1 %true
+ fi
+enddef;
+
+% norm returns a normalized vector of a vector
+% i.e. a vector of the same direction but length 1
+def norm(expr dir) = 
+ (dir/length(dir))
+enddef;
+
+% adjustwidth adjusts the width of the current glyph
+% leftmost = x value of the leftmost point
+% rightmost = x value of the rightmost point
+% lgap = left sidebearing relative to the global font_gap
+% rgap = right sidebearing relative to the global font_gap
+% (a solution using xoffset is unwise as mpost ignores xoffsets)
+def adjustwidth(expr leftmost,rightmost,leftgap,rigthgap)=
+ currentpicture:=currentpicture shifted (leftgap-leftmost,0);
+ w:=rightmost-leftmost+leftgap+rigthgap;
+ charwd:=w/hppp;
+ if known charanchortops_[charepscode]:
+  charanchortops_[charepscode]:=charanchortops_[charepscode] shifted (leftgap-leftmost,0);
+ fi
+ if known charanchorbots_[charepscode]:
+  charanchorbots_[charepscode]:=charanchorbots_[charepscode] shifted (leftgap-leftmost,0);
+ fi
+ if known charanchortoprights_[charepscode]:
+  charanchortoprights_[charepscode]:=charanchortoprights_[charepscode] shifted (leftgap-leftmost,0);
+ fi
+ if known charanchorcedillas_[charepscode]:
+  charanchorcedillas_[charepscode]:=charanchorcedillas_[charepscode] shifted (leftgap-leftmost,0);
+ fi
+enddef;
+
+% widthcorr preserves correct widths even after slanting
+% d is the drawing direction
+% t is the angle of the line that is being measured to the horizontal
+% (described as penwidth() macro in the TUGboat article)
+def widthcorr(expr d,t) = 
+ abs(length((d/length(d)) slanted font_slant_)/sind(angle(d)-t))
+enddef;
+
+% pos is a generalized penpos, that preserves correct lengths even after slanting
+% b is the width of the stem
+% d is the drawing direction
+% t is the angle of the line that is being measured to the horizontal
+vardef pos@#(expr b,d,t) = 
+ penpos@#(b*widthcorr(d,t),t)
+enddef;
+
+% as described in the TUGboat article
+vardef penwidthin(expr a,e,b,c,y,s) =
+ numeric bb,cc; bb=b/y; cc=c/y;
+ b*(-bb*(cc+a*e*s)+a*sqrt((cc+a*e*s)**2
+ +a*a-bb*bb))/(a*a-bb*bb) 
+enddef;
+
+% as described in the TUGboat article
+vardef penwidthover(expr a,e,d,c,y,s) =
+ numeric dd,cc; dd=d/y; cc=c/y;
+ d*(dd*(cc+a*e*s)+a*sqrt((cc+a*e*s)**2
+ +a*a-dd*dd))/(a*a-dd*dd) 
+enddef;
+
+% as described in the TUGboat article
+vardef poswidthhalf(expr e,b,d,c,y) =
+ numeric bb,cc,dd,ta,tb,t,s; 
+ bb=b/y; dd=d/y; cc=c/y; s=font_slant_;
+ ta=-100; tb=100; % boundaries
+ forever:
+  exitif abs(ta-tb)<=eps;
+  t:=.5[ta,tb];
+  if bb*(1++t)+4*(t-e*s)-dd*(1++(t-e*2*s))
+   -2*cc>0: tb
+  else: ta
+  fi:=t; 
+ endfor
+ (b*(1++t),d*(1++(t-2*e*s))) enddef;
+
+% posin is a penpos for horizontal pens of diagonal inscribing stems
+% (single diagonal constellations like sometimes used in "A" or "K")
+% a is the number of diagonal stems - typically 1 ("K") or 2 ("A")
+% b is the width of the stem
+% d is the amount of the stem that has to be inscribed 
+% - typically .5 (half the stem) or 1 (full stem)
+% c total width
+% y total height
+vardef posin@#(expr a,b,d,c,y) =
+ penpos@#(penwidthin(a,sign(c)*sign(y),b*d,abs(c),abs(y),font_slant_)/d,0)
+enddef;
+
+% posover is the same as posin, but for overlapping stems
+vardef posover@#(expr a,b,d,c,y) =
+ penpos@#(penwidthover(a,sign(c)*sign(y),b*d,abs(c),abs(y),font_slant_)/d,0)
+enddef;
+
+% outside of super-ellipse from point z$ to z$$ in counterclock direction
+% (arc_gen stands for "generalized arc of superellipse")
+% a is a relative value for the width at the points between
+% dira is the heading direction of z$
+% dirb is the heading direction of z$$
+vardef arc_gen.r(suffix $)(expr dira)(suffix $$)(expr dirb) = 
+ begingroup
+ save centerl,centerr,cornerl,cornerr,betweenl,betweenr,dirc;
+ pair centerl,centerr,cornerl,cornerr,betweenl,betweenr,dirc;
+ if (superness=1) or (superness=.5):
+  save startr,endr,minhalf;
+  pair startr,endr;
+  cornerr=z$r+whatever*dira=z$$r+whatever*dirb;
+  cornerl=z$l+whatever*dira=z$$l+whatever*dirb;
+  minhalf:=0.5*min(length(z$l-cornerl),length(z$$l-cornerl));
+  if superness=1:
+   startr=cornerr+minhalf/length(z$r-cornerr)*(z$r-cornerr)+z$$l-z$$r;
+   endr=cornerr+minhalf/length(z$$r-cornerr)*(z$$r-cornerr)+z$l-z$r;
+   centerr=startr+whatever*dirb=endr+whatever*dira;
+   betweenr=.75[centerr,cornerr];
+   z$r--startr{dira}...betweenr{endr-startr}...endr{dirb}--z$$r
+  else:
+   cornerr:=.6[cornerl,cornerr];
+   startr=z$r+whatever*dira=cornerr+whatever*(dira/length(dira)+dirb/length(dirb));
+   endr=z$$r+whatever*dirb=cornerr+whatever*(dira/length(dira)+dirb/length(dirb));
+   z$r--startr--endr--z$$r
+  fi
+ else:
+  centerl=z$l+whatever*dirb=z$$l+whatever*dira;
+  centerr=z$r+whatever*dirb=z$$r+whatever*dira;
+  cornerl=z$l+whatever*dira=z$$l+whatever*dirb;
+  cornerr=z$r+whatever*dira=z$$r+whatever*dirb;
+  betweenl=superness[centerl,cornerl];
+  betweenr=superness[centerr,cornerr];
+  betweenr:=betweenl+
+   .5[1,widthcorr(z$$r-z$r,angle(betweenr-betweenl))]
+   *(betweenr-betweenl);
+  % this is the mid between uncorrected and corrected
+  z$r{dira}...betweenr{z$$r-z$r}...z$$r{dirb}  
+ fi
+ endgroup
+enddef;
+
+% analogous to the above but for the suffix "l"
+% (arc_gen stands for "generalized arc of superellipse")
+vardef arc_gen.l(suffix $)(expr dira)(suffix $$)(expr dirb,a) = 
+ begingroup
+ save centerl,cornerl,betweenl;
+ pair centerl,cornerl,betweenl;
+ if (superness=1) or (superness=.5):
+  save startl,endl,minhalf;
+  pair startl,endl;
+  cornerl=z$l+whatever*dira=z$$l+whatever*dirb;
+  if superness=1:
+   minhalf:=0.5*min(length(z$l-cornerl),length(z$$l-cornerl));
+   startl=cornerl+minhalf/length(z$l-cornerl)*(z$l-cornerl);
+   endl=cornerl+minhalf/length(z$$l-cornerl)*(z$$l-cornerl);
+   centerl=startl+whatever*dirb=endl+whatever*dira;
+   betweenl=.75[centerl,cornerl];
+   z$l--startl{dira}...betweenl{endl-startl}...endl{dirb}--z$$l
+  else:
+   z$l--cornerl--z$$l
+  fi
+ else:
+  centerl=z$l+whatever*dirb=z$$l+whatever*dira;
+  cornerl=z$l+whatever*dira=z$$l+whatever*dirb;
+  betweenl=superness[centerl,cornerl];
+  z$l{dira}...betweenl{z$$l-z$l}...z$$l{dirb} 
+ fi
+ endgroup
+enddef;
+
+% outside of super-ellipse from point z$ to z$$ in counterclock direction
+% a is a relative value for the width at the points between
+vardef arc.r(suffix $,$$) = 
+ if (x$$r>x$r)  and  (y$$r<y$r)	%lower left quarter of an ellipse
+ or (x$$r<x$r) and (y$$r>y$r): 	%upper right quarter of an ellipse
+  arc_gen.r($,(0,y$$r-y$r),$$,(x$$r-x$r,0))
+ else: %lower right and upper left quarter of an ellipse
+  arc_gen.r($,(x$$r-x$r,0),$$,(0,y$$r-y$r))
+ fi
+enddef;
+
+% analogous to the above but for the suffix "l"
+vardef arc.l(suffix $,$$) = 
+ if (x$$l>x$l)  and  (y$$l<y$l)	%lower left quarter of an ellipse
+ or (x$$l<x$l) and (y$$l>y$l): 	%upper right quarter of an ellipse
+  arc_gen.l($,(0,y$$l-y$l),$$,(x$$l-x$l,0),1)
+ else: %lower right and upper left quarter of an ellipse
+  arc_gen.l($,(x$$l-x$l,0),$$,(0,y$$l-y$l),1)
+ fi
+enddef;
+
+% returns 1 if point p is right of the line
+% going through point q heading in direction d
+% returns -1 for left
+% returns 0 for being on the line
+def sideof(expr p,q,d) =
+ if xpart(d)/length(d)*(ypart(q)-ypart(p))>ypart(d)/length(d)*(xpart(q)-xpart(p)):
+  1
+ elseif xpart(d)/length(d)*(ypart(q)-ypart(p))=ypart(d)/length(d)*(xpart(q)-xpart(p)):
+  0
+ else:
+  -1
+ fi
+enddef;
+
+% points for a serif with jut jt
+% and slab slb
+vardef serifpoints(suffix $,$$,@)(expr jt,slb) =
+ save jts;
+ if sign(jt)*sideof(z$$r,z$,z$$-z$)<0:
+  z@0=z$l;
+  z@1=z$$l;
+ else:
+  z@0=z$r;
+  z@1=z$$r;
+ fi
+ if monospace and (y@1=y$$):
+  jts:=jt*squeeze;
+ else:
+  jts:=jt;
+ fi
+ z@4=z@1+slb*widthcorr(z@1-z$$,angle(z$$-z$))/length(z$$-z$)*(z$-z$$);
+ z@3=z@4+sign(jts)*jts/length(z@1-z$$)*(z@1-z$$);
+ z@2=z@3+whatever*dir(angle(z@1-z$$)-sign(jts)*90)=whatever[z@1,z$$];
+enddef;
+
+% serif with jut jt
+% and slab slb
+vardef serif(suffix $,$$,@)(expr jt,slb) =
+ if jt<>0:
+  serifpoints($,$$,@,jt,slb);
+  fill z@1--z@2--z@3--z@4--z$$--cycle;
+  labels(@2,@3,@4);
+ fi
+enddef;
+
+vardef serifs(suffix $,$$,@,@@)(expr jtl,jtr,slb) =
+ serif($,$$,@,jtl,slb);
+ serif($,$$,@@,-jtr,slb);
+enddef;
+
+vardef serifarm(suffix $,$$,@)(expr jt,slb) =
+ if jt<>0:
+  serifpoints($,$$,@,jt,slb);
+  if z@0=z$l:
+   fill z$l--z$r--z$$r--z@2--z@3--z@4--cycle;
+  else:
+   fill z$r--z$l--z$$l--z@2--z@3--z@4--cycle;
+  fi
+  labels(@2,@3,@4);
+ else:
+  penstroke z$e--z$$e;
+ fi
+enddef;
+
+vardef serifsarm(suffix $,$$,@,@@)(expr jtl,jtr,slb) =
+ if (jtl<>0) and (jtr<>0):
+  serifpoints($,$$,@,jtl,slb);
+  serifpoints($,$$,@@,-jtr,slb);
+  if z@0=z$l:
+   fill z$l--z$r--z@@4--z@@3--z@@2--z@2--z@3--z@4--cycle;
+  else:
+   fill z$r--z$l--z@@4--z@@3--z@@2--z@2--z@3--z@4--cycle;
+  fi
+  labels(@2,@3,@4);
+  labels(@@2,@@3,@@4);
+ else:
+  penstroke z$e--z$$e;
+ fi
+enddef;
+
+vardef serifsarms(suffix $,$$,@,@@,@@@,@@@@)(expr jtl,jtr,slb) =
+ if (jtl<>0) and (jtr<>0):
+  serifpoints($,$$,@,jtl,slb);
+  serifpoints($,$$,@@,-jtr,slb);
+  serifpoints($$,$,@@@,jtl,slb);
+  serifpoints($$,$,@@@@,-jtr,slb);
+  if z@0=z$l:
+   fill z@@@@4--z@@@@3--z@@@@2--z@@@2--z@@@3--z@@@4--z@@4--z@@3--z@@2--z@2--z@3--z@4--cycle;
+  else:
+   fill z@@@@4--z@@@@3--z@@@@2--z@@@2--z@@@3--z@@@4--z@@4--z@@3--z@@2--z@2--z@3--z@4--cycle;
+  fi
+  labels(@2,@3,@4);
+  labels(@@2,@@3,@@4);
+  labels(@@@2,@@@3,@@@4);
+  labels(@@@@2,@@@@3,@@@@4);
+ else:
+  penstroke z$e--z$$e;
+ fi
+enddef;
+
+
